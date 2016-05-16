@@ -1,0 +1,172 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:2:1-79:12
+	xmlns:android
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:2:11-69
+	package
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:3:5-44
+	android:versionName
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:5:5-30
+		INJECTED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml
+		INJECTED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml
+		INJECTED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:6:5-74
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\design\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:6:42-71
+	android:minSdkVersion
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:6:15-41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\AndroidManifest.xml:23:9-75
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:8:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:9:5-73
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:9:22-71
+supports-gl-texture#GL_OES_compressed_ETC1_RGB8_texture
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:11:26-76
+supports-gl-texture#GL_OES_compressed_paletted_texture
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:12:5-78
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:12:26-75
+uses-feature#android.hardware.bluetooth_le
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:14:5-16:35
+	android:required
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:16:9-33
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:15:9-53
+application
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:18:5-75:19
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\design\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:21:9-41
+	android:allowBackup
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:19:9-35
+	android:icon
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:20:9-45
+	android:theme
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:22:9-40
+activity#com.badlogic.invaders.android.AndroidLauncher
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:24:9-33:20
+	android:screenOrientation
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:27:13-50
+	android:label
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:26:13-45
+	android:configChanges
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:28:13-83
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:25:13-73
+intent-filter#android.intent.action.MAIN+android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:29:13-32:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:30:25-66
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:31:17-86
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:31:27-83
+activity#com.badlogic.invaders.android.MainActivity
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:35:9-45:20
+	android:screenOrientation
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:39:13-49
+	android:label
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:38:13-45
+	android:theme
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:37:13-47
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:36:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:40:13-44:29
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:43:17-76
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:43:27-74
+activity#com.badlogic.invaders.android.BLEDeviceScanActivity
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:46:9-48:20
+	android:screenOrientation
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:47:19-55
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:46:19-56
+receiver#com.badlogic.invaders.android.GattBroadcastReceiver
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:50:9-74:20
+	android:exported
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:53:13-36
+	android:enabled
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:52:13-35
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:51:13-50
+intent-filter#com.inspirationindustry.motsaibluetooth.ACTION_GATT_CONNECTED
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:54:13-57:29
+action#com.inspirationindustry.motsaibluetooth.ACTION_GATT_CONNECTED
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:55:17-56:26
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:55:25-101
+intent-filter#com.inspirationindustry.motsaibluetooth.ACTION_GATT_DISCONNECTED
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:58:13-61:29
+action#com.inspirationindustry.motsaibluetooth.ACTION_GATT_DISCONNECTED
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:59:17-60:26
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:59:25-104
+intent-filter#com.inspirationindustry.motsaibluetooth.ACTION_GATT_SERVICES_DISCOVERED
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:62:13-65:29
+action#com.inspirationindustry.motsaibluetooth.ACTION_GATT_SERVICES_DISCOVERED
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:63:17-64:26
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:63:25-111
+intent-filter#com.inspirationindustry.motsaibluetooth.ACTION_DATA_AVAILABLE
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:66:13-69:29
+action#com.inspirationindustry.motsaibluetooth.ACTION_DATA_AVAILABLE
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:67:17-68:26
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:67:25-101
+intent-filter#com.inspirationindustry.motsaibluetooth.EXTRA_DATA
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:70:13-73:29
+action#com.inspirationindustry.motsaibluetooth.EXTRA_DATA
+ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:71:17-72:26
+	android:name
+		ADDED from C:\Users\scott\Documents\libgdx-demo-invaders\android\AndroidManifest.xml:71:25-90

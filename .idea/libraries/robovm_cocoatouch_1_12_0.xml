@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="robovm-cocoatouch-1.12.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.12.0/3981e8b8dc5c446d3ac99533d9a0ea9b1514e84f/robovm-cocoatouch-1.12.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.12.0/a5c9fccf45196e13f635efc5f6c21f6fafc23d3e/robovm-cocoatouch-1.12.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

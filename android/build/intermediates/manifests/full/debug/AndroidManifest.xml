@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.badlogic.invaders.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+    <supports-gl-texture android:name="GL_OES_compressed_paletted_texture" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/GdxTheme" >
+        <activity
+            android:name="com.badlogic.invaders.android.AndroidLauncher"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.badlogic.invaders.android.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.badlogic.invaders.android.BLEDeviceScanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver
+            android:name="com.badlogic.invaders.android.GattBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.inspirationindustry.motsaibluetooth.ACTION_GATT_CONNECTED" >
+                </action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.inspirationindustry.motsaibluetooth.ACTION_GATT_DISCONNECTED" >
+                </action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.inspirationindustry.motsaibluetooth.ACTION_GATT_SERVICES_DISCOVERED" >
+                </action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.inspirationindustry.motsaibluetooth.ACTION_DATA_AVAILABLE" >
+                </action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.inspirationindustry.motsaibluetooth.EXTRA_DATA" >
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

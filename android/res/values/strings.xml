@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">libgdx-demo-invaders</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    //Borrowed From Fish App
+    <string name="network_unavailable_message">Netwok Unavailable</string>
+    <string name="error_title">Oh no!</string>
+    <string name="error_message">Someone threw a wrench in the processor! Please try again later.</string>
+    <string name="error_ok">OK</string>
+    <string name="ble_not_supported">BLE NOT SUPPORTED</string>
+    <string name="title_devices">title_devices</string>
+    <string name="error_bluetooth_not_supported">bluetooth_not_supported</string>
+    <string name="emptyText">Cool it\'s empty</string>
+
+    <string name="title_activity_open_glvisualization">OpenGLVisualizationActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_open_gl">OpenGlActivity</string>
+</resources>

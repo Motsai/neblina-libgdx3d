@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\neblina.png",
+        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\res\\mipmap-xhdpi\\neblina.png"
+    },
+    {
+        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\home_bg.png",
+        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\res\\mipmap-xhdpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo_motsai_rgb_small.png",
+        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\res\\mipmap-xhdpi\\logo_motsai_rgb_small.png"
+    },
+    {
+        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\res\\mipmap-xhdpi\\ic_launcher.png"
+    }
+]

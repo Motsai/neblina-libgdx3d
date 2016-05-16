@@ -12,107 +12,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db3d494d-9516-4b2c-a111-f572dd413229" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/butterknife_6_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/core_core_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_android_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_gwt_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_gwt_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_lwjgl_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_robovm_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_android_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_desktop_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_gwt_1_9_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_gwt_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_platform_1_9_4_SNAPSHOT_natives_desktop.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_platform_1_9_4_SNAPSHOT_natives_desktop.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_platform_1_9_4_SNAPSHOT_natives_ios.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gwt_servlet_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gwt_user_2_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jinput_2_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jinput_platform_2_0_5_natives_linux.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jinput_platform_2_0_5_natives_osx.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jinput_platform_2_0_5_natives_windows.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jlayer_1_0_1_gdx.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jorbis_0_0_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/json_20090211.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jutils_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lwjgl_2_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lwjgl_platform_2_9_2_natives_linux.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lwjgl_platform_2_9_2_natives_osx.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lwjgl_platform_2_9_2_natives_windows.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lwjgl_util_2_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robovm_cocoatouch_1_12_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robovm_cocoatouch_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robovm_objc_1_12_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robovm_objc_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robovm_rt_1_12_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robovm_rt_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_24_0_0_alpha2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/validation_api_1_0_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/validation_api_1_0_0_GA_sources.xml" />
-      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-1.9.3-SNAPSHOT_249e3fb5768e10f98b1d637e7d7e2d8a3e1959ac.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.3-SNAPSHOT_a7215af4d3837c91c28eb07a14520c4c85122b9f.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-1.9.3-SNAPSHOT_44ead0d294aa38d65ff04f0ffe961c8c4e58047e.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-android-1.9.3-SNAPSHOT_e1b65ce7a6edc3f97db19d51835af317b6e3c36c.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/screens/GameLoop.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/screens/GameLoop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/simulation/Ship.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/simulation/Ship.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/simulation/Simulation.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/simulation/Simulation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug-unaligned.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0-alpha2_a9f0be4bae419dc0c9ff525c598a6792e1f342e1.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0-alpha2_a9f0be4bae419dc0c9ff525c598a6792e1f342e1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/debug_c082a35311da888b1f8a90220895fbc3e5929e16.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/debug_c082a35311da888b1f8a90220895fbc3e5929e16.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/android/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/badlogic/invaders/screens/GameLoop.java" afterPath="$PROJECT_DIR$/core/src/com/badlogic/invaders/screens/GameLoop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Ship.java" afterPath="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Ship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java" afterPath="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/android.iml" afterPath="$PROJECT_DIR$/android/android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/anim.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/anim.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/color.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/core.iml" afterPath="$PROJECT_DIR$/core/core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/desktop.iml" afterPath="$PROJECT_DIR$/desktop/desktop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-anydpi-v21.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-anydpi-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-v21.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/html.iml" afterPath="$PROJECT_DIR$/html/html.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/ios.iml" afterPath="$PROJECT_DIR$/ios/ios.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\animated_vector_drawable_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\appcompat_v7_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\butterknife_6_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\core_core_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\design_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_android_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_gwt_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_gwt_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_lwjgl_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_robovm_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_android_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_desktop_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_gwt_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_gwt_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_platform_1_9_4_SNAPSHOT_natives_desktop.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_platform_1_9_4_SNAPSHOT_natives_desktop.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_platform_1_9_4_SNAPSHOT_natives_ios.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gwt_servlet_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gwt_user_2_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_2_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_platform_2_0_5_natives_linux.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_platform_2_0_5_natives_osx.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_platform_2_0_5_natives_windows.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jlayer_1_0_1_gdx.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jorbis_0_0_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\json_20090211.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jutils_1_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_2_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_platform_2_9_2_natives_linux.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_platform_2_9_2_natives_osx.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_platform_2_9_2_natives_windows.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_util_2_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\recyclerview_v7_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_cocoatouch_1_12_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_cocoatouch_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_objc_1_12_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_objc_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_rt_1_12_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_rt_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\support_annotations_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\support_v4_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\support_vector_drawable_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\validation_api_1_0_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\validation_api_1_0_0_GA_sources.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="libgdx-demo-invaders.iws" />
@@ -147,7 +94,7 @@
       <file leaf-file-name="Simulation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2103825">
+            <state vertical-scroll-proportion="0.0">
               <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding>
                 <element signature="e#0#14339#0" expanded="true" />
@@ -3073,8 +3020,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3171,8 +3119,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3404,7 +3351,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="860" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3442,11 +3389,11 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32957748" sideWeight="0.44117647" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3465,8 +3412,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32957748" sideWeight="0.5588235" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3549,13 +3496,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/menu/menu_main.xml">
@@ -3833,10 +3780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.2868853">
           <caret line="84" column="43" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#4266#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3868,7 +3811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2103825">
+        <state vertical-scroll-proportion="0.0">
           <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
           <folding>
             <element signature="e#0#14339#0" expanded="true" />

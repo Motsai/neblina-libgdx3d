@@ -42,7 +42,6 @@ public class Simulation implements Disposable {
 	public final static float PLAYFIELD_MAX_X = 14;
 	public final static float PLAYFIELD_MIN_Z = -15;
 	public final static float PLAYFIELD_MAX_Z = 2;
-	int time_keeper = 0;
 
 	public ArrayList<Invader> invaders = new ArrayList<Invader>();
 	public ArrayList<Block> blocks = new ArrayList<Block>();
@@ -191,26 +190,6 @@ public class Simulation implements Disposable {
 		checkInvaderCollision();
 		checkBlockCollision();
 		checkNextLevel();
-
-		//TODO: WHERE DO I PUT THIS!
-
-//		float q0 = (float) Invaders.mInvaderInterface.getQ0();
-//		float q1 = (float) Invaders.mInvaderInterface.getQ1();
-//		float q2 = (float) Invaders.mInvaderInterface.getQ2();
-//		float q3 = (float) Invaders.mInvaderInterface.getQ3();
-
-//		ship.transform.set(
-//
-//				(float) Invaders.mInvaderInterface.getQ0(),
-//				(float) Invaders.mInvaderInterface.getQ1() * -1,
-//				(float) Invaders.mInvaderInterface.getQ3(),//inverted up and down movement
-//				(float) Invaders.mInvaderInterface.getQ2() * -1);
-//
-//		ship.transform.rotate(0, 0, 1, 180);
-		//      FLY HOME , Pitch , Roll
-
-//		float angle = 57.29578f*((float)(Math.atan2(2 * (q0 * q0 + q1 * q2), 1 - 2 * (q0 * q0 + q1 * q1))));
-
 	}
 
 	private void updateInvaders (float delta) {
@@ -365,9 +344,16 @@ public class Simulation implements Disposable {
 		if (tmpV1.x < PLAYFIELD_MIN_X) ship.transform.trn(PLAYFIELD_MIN_X - tmpV1.x, 0, 0);
 
 		Vector3 oldTranslation = ship.transform.getTranslation(tmpV1);
-		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2);
+//		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2);
 
+		Quaternion rotateQ = new Quaternion(1,0,0,0);
 		ship.transform.set(oldTranslation, rotateQ);
+
+//		ship.transform.set(oldTranslation.mulAdd(flip,-1), rotateQ);
+
+		float roll_x = 57.29578f*((float)(Math.atan2(2*(q0*q1+q2*q3),1-2*(q1*q1+q2*q2))));
+		ship.transform.rotate(0, 0, 1, roll_x);
+
 
 //		ship.transform.set(
 //				(float) Invaders.mInvaderInterface.getQ0(),
@@ -390,18 +376,15 @@ public class Simulation implements Disposable {
 		if (tmpV1.x > PLAYFIELD_MAX_X) ship.transform.trn(PLAYFIELD_MAX_X - tmpV1.x, 0, 0);
 
 		Vector3 oldTranslation = ship.transform.getTranslation(tmpV1);
-		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2);
+//		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2);
 		Vector3 flip = new Vector3(0,0,0);
+
+
+		Quaternion rotateQ = new Quaternion(1,0,0,0);
 		ship.transform.set(oldTranslation.mulAdd(flip,-1), rotateQ);
 
-
-//		ship.transform.set(
-//				(float) Invaders.mInvaderInterface.getQ0(),
-//				(float) Invaders.mInvaderInterface.getQ1() * -1,
-//				(float) Invaders.mInvaderInterface.getQ3(),//inverted up and down movement
-//				(float) Invaders.mInvaderInterface.getQ2() * -1);
-//
-//		ship.transform.rotate(0, 0, 1, 180);
+		float roll_x = 57.29578f*((float)(Math.atan2(2*(q0*q1+q2*q3),1-2*(q1*q1+q2*q2))));
+		ship.transform.rotate(0,0,1,roll_x);
 	}
 
 	public void shot () {

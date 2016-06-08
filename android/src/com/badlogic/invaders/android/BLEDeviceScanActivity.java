@@ -32,7 +32,6 @@ import butterknife.OnClick;
 
 public class BLEDeviceScanActivity extends ListActivity {
 
-    //TODO: Implement parcelable, and write the writeToParcel() function to package Q values OR use broadcast receivers
     public static float latest_Q0 = 0.0f;
     public static float latest_Q1 = 0.0f;
     public static float latest_Q2 = 0.0f;
@@ -66,7 +65,12 @@ public class BLEDeviceScanActivity extends ListActivity {
     //NEBLINA CUSTOM UUIDs
     public static final UUID NEB_SERVICE_UUID = UUID.fromString("0df9f021-1532-11e5-8960-0002a5d5c51b");
     public static final UUID NEB_DATACHAR_UUID = UUID.fromString("0df9f022-1532-11e5-8960-0002a5d5c51b");
-//    public static final UUID NEB_CTRLCHAR_UUID = UUID.fromString("0df9f023-1532-11e5-8960-0002a5d5c51b");
+    public static final UUID NEB_CTRLCHAR_UUID = UUID.fromString("0df9f023-1532-11e5-8960-0002a5d5c51b");
+
+    public static final byte NEB_CTRL_PKTYPE_CMD = 2;
+    public static final byte NEB_CTRL_SUBSYS_MOTION_ENG = 1;
+
+
 
 
     @Override
@@ -237,10 +241,52 @@ public class BLEDeviceScanActivity extends ListActivity {
                     //Get the characteristic from the discovered gatt server
                     BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
                     BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
+                    BluetoothGattCharacteristic ctrl_characteristic = service.getCharacteristic(NEB_CTRLCHAR_UUID);
 
-                    //Here is the code that triggers a one time read of the characteristic
+                    //Here is the code that triggers a ONE TIME read of the characteristic
 //                    gatt.readCharacteristic(data_characteristic);
 //                    Log.w("BLUETOOTH_DEBUG", "Data Characteristic Read Enabled");
+
+                    //TODO: Write to the neblina to start sending quaternions
+                    //Write a command to start Quaternion streaming
+
+                    byte[] writeData = new byte[20];
+                    for(int i=0; i <20;i++) {
+                        writeData[i] = 0;
+                    }
+                    writeData[0] = (NEB_CTRL_PKTYPE_CMD << 5) | NEB_CTRL_SUBSYS_MOTION_ENG;
+                    writeData[1] = 16; //TODO: Replace with sizeOf(dataPortion);
+                    writeData[2] = 0;
+                    writeData[3] = 4;
+                    boolean enable = true;
+                    if (enable == true)
+                    {
+                        writeData[8] = 1;
+                    }
+                    else
+                    {
+                        writeData[8] = 0;
+                    }
+
+                    //Display the string that was built
+                    Log.w("GATT TAG", writeData.toString());
+                    if (writeData != null && writeData.length > 0) {
+                        final StringBuilder stringBuilder = new StringBuilder(writeData.length);
+                        for (byte byteChar : writeData)
+                            stringBuilder.append(String.format("%02X ", byteChar));
+                        Log.w("GATT TAG", "Hex (length=" + writeData.length + "): " + stringBuilder.toString());
+                    }
+
+
+                    boolean didWriteCharacteristic = ctrl_characteristic.setValue(writeData);
+                    if(!didWriteCharacteristic){
+                        Log.w("GATT TAG","Characteristic DID NOT WRITE :~( ");
+                    }
+                    
+//                    boolean didWriteGattCharacteristic = gatt.writeCharacteristic(ctrl_characteristic);
+//                    if(!didWriteGattCharacteristic){
+//                        Log.w("GATT TAG","GATTCharacteristic FAIL :O ");
+//                    }
 
                     gatt.setCharacteristicNotification(data_characteristic, true);
 
@@ -329,7 +375,7 @@ public class BLEDeviceScanActivity extends ListActivity {
             final byte[] q0 = Arrays.copyOfRange(data, 8, 9 + 1); // Bytes 8-9 are Q0 value
             final byte[] q1 = Arrays.copyOfRange(data, 10, 11 + 1); // Bytes 10-11 are Q1 value
             final byte[] q2 = Arrays.copyOfRange(data, 12, 13 + 1); // Bytes 12-13 are Q2 value
-            final byte[] q3 = Arrays.copyOfRange(data, 14, 15 + 1); // Bytes 12-15 are Q3 value
+            final byte[] q3 = Arrays.copyOfRange(data, 14, 15 + 1); // Bytes 14-15 are Q3 value
             final byte[] reserved = Arrays.copyOfRange(data, 16, 19 + 1); // Bytes 16-19 are reserved
 
             //Convert to big endian
@@ -337,10 +383,6 @@ public class BLEDeviceScanActivity extends ListActivity {
             latest_Q1 = normalizedQ(q1);
             latest_Q2 = normalizedQ(q2);
             latest_Q3 = normalizedQ(q3);
-
-
-
-
 
             if((periodic_print%100)==0) {
                 if(debug_mode1==true) {

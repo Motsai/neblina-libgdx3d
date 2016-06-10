@@ -173,8 +173,6 @@ public class BLEDeviceScanActivity extends ListActivity {
         Intent intent = new Intent(this,AndroidLauncher.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
-
-
     }
 
     private BluetoothAdapter.LeScanCallback mLeScanCallback =
@@ -254,10 +252,7 @@ public class BLEDeviceScanActivity extends ListActivity {
 //                    gatt.readCharacteristic(data_characteristic);
 //                    Log.w("BLUETOOTH_DEBUG", "Data Characteristic Read Enabled");
 
-                    //TODO: Write to the neblina to start sending quaternions
-                    //Write a command to start Quaternion streaming
-
-                    //Create the packet
+                    //Create the packet ONCE to WRITE Quaternion streaming command
                     byte[] writeData = new byte[20];
                     for(int i=0; i <20;i++) {
                         writeData[i] = 0;
@@ -275,14 +270,6 @@ public class BLEDeviceScanActivity extends ListActivity {
                     {
                         writeData[8] = 0;
                     }
-
-                    //Change writeData from Big Endian to Little Endian
-//                    for (int i =0; i < writeData.length/2; i=i+2){
-//                        byte temp = writeData[i];
-//                        writeData[i] = writeData[i+1];
-//                        writeData[i+1] = temp;
-//                    }
-
 
                     //Display the string that was built
                     Log.w("GATT TAG", writeData.toString());
@@ -506,7 +493,6 @@ public class BLEDeviceScanActivity extends ListActivity {
 
 
     //THESE FUNCTIONS ARE CALLED WHEN WE CLICK A BUTTON
-
     @OnClick(R.id.refreshButton)
     public void onRefreshButtonClick(View view){
         if(debug_mode1==true) {

@@ -344,24 +344,16 @@ public class Simulation implements Disposable {
 		if (tmpV1.x < PLAYFIELD_MIN_X) ship.transform.trn(PLAYFIELD_MIN_X - tmpV1.x, 0, 0);
 
 		Vector3 oldTranslation = ship.transform.getTranslation(tmpV1);
-//		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2);
+		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2); //Used if you want all 3-axis rotation
+//		Quaternion rotateQ = new Quaternion(1,0,0,0); //Used if you only want the roll
 
-		Quaternion rotateQ = new Quaternion(1,0,0,0);
-		ship.transform.set(oldTranslation, rotateQ);
+        ship.transform.setToRotation(0, 0, 0, 0);
+        ship.transform.set(oldTranslation, rotateQ);
 
-//		ship.transform.set(oldTranslation.mulAdd(flip,-1), rotateQ);
-
-		float roll_x = 57.29578f*((float)(Math.atan2(2*(q0*q1+q2*q3),1-2*(q1*q1+q2*q2))));
-		ship.transform.rotate(0, 0, 1, roll_x);
-
-
-//		ship.transform.set(
-//				(float) Invaders.mInvaderInterface.getQ0(),
-//				(float) Invaders.mInvaderInterface.getQ1() * -1,
-//				(float) Invaders.mInvaderInterface.getQ3(),//inverted up and down movement
-//				(float) Invaders.mInvaderInterface.getQ2() * -1);
-//
-//		ship.transform.rotate(0, 0, 1, 180);
+//      ROLL-ONLY CODE - BETTER FOR GAME MODE
+//		float roll_x = 57.29578f*((float)(Math.atan2(2*(q0*q1+q2*q3),1-2*(q1*q1+q2*q2))));//Used if you want only roll
+//		ship.transform.rotate(0, 0, 1, roll_x);//Used if you want only roll
+// 		ship.transform.rotate(rotateQ);
 	}
 
 	public void moveShipRight (float delta, float scale) {
@@ -376,15 +368,18 @@ public class Simulation implements Disposable {
 		if (tmpV1.x > PLAYFIELD_MAX_X) ship.transform.trn(PLAYFIELD_MAX_X - tmpV1.x, 0, 0);
 
 		Vector3 oldTranslation = ship.transform.getTranslation(tmpV1);
-//		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2);
+
 		Vector3 flip = new Vector3(0,0,0);
 
+		Quaternion rotateQ = new Quaternion(q0,-1*q1,q3,-1*q2); //For 3-axis
+//		Quaternion rotateQ = new Quaternion(1, 0, 0, 0); //For ROLL-ONLY
+//      ship.transform.set(oldTranslation.mulAdd(flip, -1), rotateQ);//ROLL-ONLY
+//		float roll_x = 57.29578f*((float)(Math.atan2(2*(q0*q1+q2*q3),1-2*(q1*q1+q2*q2))));//ROLL ONLY
+//		ship.transform.rotate(0,0,1,roll_x);//ROLL ONLY
 
-		Quaternion rotateQ = new Quaternion(1,0,0,0);
-		ship.transform.set(oldTranslation.mulAdd(flip,-1), rotateQ);
 
-		float roll_x = 57.29578f*((float)(Math.atan2(2*(q0*q1+q2*q3),1-2*(q1*q1+q2*q2))));
-		ship.transform.rotate(0,0,1,roll_x);
+        ship.transform.setToRotation(0, 0, 0, 0);
+        ship.transform.set(oldTranslation.mulAdd(flip, -1), rotateQ);
 	}
 
 	public void shot () {

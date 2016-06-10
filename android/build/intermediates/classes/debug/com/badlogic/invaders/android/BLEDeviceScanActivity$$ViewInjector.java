@@ -8,6 +8,14 @@ import butterknife.ButterKnife.Injector;
 public class BLEDeviceScanActivity$$ViewInjector<T extends com.badlogic.invaders.android.BLEDeviceScanActivity> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
+    view = finder.findRequiredView(source, 2131493006, "field 'q1_text'");
+    target.q1_text = finder.castView(view, 2131493006, "field 'q1_text'");
+    view = finder.findRequiredView(source, 2131493008, "field 'q2_text'");
+    target.q2_text = finder.castView(view, 2131493008, "field 'q2_text'");
+    view = finder.findRequiredView(source, 2131493010, "field 'q3_text'");
+    target.q3_text = finder.castView(view, 2131493010, "field 'q3_text'");
+    view = finder.findRequiredView(source, 2131493012, "field 'q4_text'");
+    target.q4_text = finder.castView(view, 2131493012, "field 'q4_text'");
     view = finder.findRequiredView(source, 2131492978, "method 'onRefreshButtonClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
@@ -128,5 +136,9 @@ public class BLEDeviceScanActivity$$ViewInjector<T extends com.badlogic.invaders
   }
 
   @Override public void reset(T target) {
+    target.q1_text = null;
+    target.q2_text = null;
+    target.q3_text = null;
+    target.q4_text = null;
   }
 }

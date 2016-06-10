@@ -19,7 +19,6 @@ public class AndroidLauncher extends AndroidApplication {
 		initialize(invaders, config);
 
 		Intent intent = new Intent(this, BLEDeviceScanActivity.class);
-//		intent.putExtra("invaders",InvadersParcle);
 		startActivity(intent);
 
 

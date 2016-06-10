@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ import java.util.List;
 import java.util.UUID;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class BLEDeviceScanActivity extends ListActivity {
@@ -48,7 +50,8 @@ public class BLEDeviceScanActivity extends ListActivity {
     private BluetoothGatt mBluetoothGatt;
     private boolean say_once = true;
     private int periodic_print = 0;
-    public static boolean debug_mode1 = false;
+    public static boolean debug_mode1 = true;
+    public static boolean debug_mode2 = true;
 
     //GATT CALLBACK VARIABLES
     private static final int STATE_DISCONNECTED = 0;
@@ -61,6 +64,7 @@ public class BLEDeviceScanActivity extends ListActivity {
     public final static String EXTRA_DATA = "com.inspirationindustry.motsaibluetooth.EXTRA_DATA";
     private final static String TAG = BLEDeviceScanActivity.class.getSimpleName();
     private int mConnectionState = STATE_DISCONNECTED;
+    public static final String ACTION_DATA_WRITE = "android.ble.common.ACTION_DATA_WRITE";
 
     //NEBLINA CUSTOM UUIDs
     public static final UUID NEB_SERVICE_UUID = UUID.fromString("0df9f021-1532-11e5-8960-0002a5d5c51b");
@@ -70,7 +74,10 @@ public class BLEDeviceScanActivity extends ListActivity {
     public static final byte NEB_CTRL_PKTYPE_CMD = 2;
     public static final byte NEB_CTRL_SUBSYS_MOTION_ENG = 1;
 
-
+    @InjectView(R.id.Q1_TEXT) TextView q1_text;
+    @InjectView(R.id.Q2_TEXT) TextView q2_text;
+    @InjectView(R.id.Q3_TEXT) TextView q3_text;
+    @InjectView(R.id.Q4_TEXT) TextView q4_text;
 
 
     @Override
@@ -196,7 +203,7 @@ public class BLEDeviceScanActivity extends ListActivity {
             };
 
 
-    //THE 3 CALLBACKS
+    //ALL THE CALLBACKS FOR ACTIVE BLE OPERATION
     private final BluetoothGattCallback mGattCallback =
             new BluetoothGattCallback() {
 
@@ -250,6 +257,7 @@ public class BLEDeviceScanActivity extends ListActivity {
                     //TODO: Write to the neblina to start sending quaternions
                     //Write a command to start Quaternion streaming
 
+                    //Create the packet
                     byte[] writeData = new byte[20];
                     for(int i=0; i <20;i++) {
                         writeData[i] = 0;
@@ -268,6 +276,14 @@ public class BLEDeviceScanActivity extends ListActivity {
                         writeData[8] = 0;
                     }
 
+                    //Change writeData from Big Endian to Little Endian
+//                    for (int i =0; i < writeData.length/2; i=i+2){
+//                        byte temp = writeData[i];
+//                        writeData[i] = writeData[i+1];
+//                        writeData[i+1] = temp;
+//                    }
+
+
                     //Display the string that was built
                     Log.w("GATT TAG", writeData.toString());
                     if (writeData != null && writeData.length > 0) {
@@ -278,33 +294,37 @@ public class BLEDeviceScanActivity extends ListActivity {
                     }
 
 
+                    //Check to see if the set worked
                     boolean didWriteCharacteristic = ctrl_characteristic.setValue(writeData);
                     if(!didWriteCharacteristic){
                         Log.w("GATT TAG","Characteristic DID NOT WRITE :~( ");
                     }
-                    
-//                    boolean didWriteGattCharacteristic = gatt.writeCharacteristic(ctrl_characteristic);
-//                    if(!didWriteGattCharacteristic){
-//                        Log.w("GATT TAG","GATTCharacteristic FAIL :O ");
-//                    }
 
-                    gatt.setCharacteristicNotification(data_characteristic, true);
+//                  boolean didWriteGattCharacteristic = mBluetoothGatt.writeCharacteristic(ctrl_characteristic);
+                    boolean didWriteGattCharacteristic = gatt.writeCharacteristic(ctrl_characteristic);
 
-                    List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
-                    BluetoothGattDescriptor descriptor = descriptors.get(0);
-
-                    descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
-
-                    if (gatt.writeDescriptor(descriptor)){
-                        if(debug_mode1==true) {
-                            Log.w("BLUETOOTH_DEBUG", "Successfully wrote descriptor");
-                        }
-
-                    }else {
-                        if(debug_mode1==true) {
-                            Log.w("BLUETOOTH_DEBUG", "Failed to write descriptor");
-                        }
+                    //Check to see if the write worked
+                    if(!didWriteGattCharacteristic){
+                        Log.w("GATT TAG","GATTCharacteristic FAIL :O ");
                     }
+
+//                    //Order periodic updates
+//                    gatt.setCharacteristicNotification(data_characteristic, true);
+//                    List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
+//                    BluetoothGattDescriptor descriptor = descriptors.get(0);
+//
+//                    descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+//
+//                    if (gatt.writeDescriptor(descriptor)){
+//                        if(debug_mode1==true) {
+//                            Log.w("BLUETOOTH_DEBUG", "Successfully wrote descriptor");
+//                        }
+//
+//                    }else {
+//                        if(debug_mode1==true) {
+//                            Log.w("BLUETOOTH_DEBUG", "Failed to write descriptor");
+//                        }
+//                    }
                 }
 
                 //CALLED WHEN CHARACTERISTICS ARE READ
@@ -315,11 +335,41 @@ public class BLEDeviceScanActivity extends ListActivity {
                     if(debug_mode1==true) {
                         Log.w("BLUETOOTH DEBUG", "You read characteristic value = " + characteristic.getValue());
                     }
-
                     if (status == BluetoothGatt.GATT_SUCCESS) {
                         broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
                     }
                 }
+
+
+                public void onCharacteristicWrite(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic, int status){
+
+                    if(debug_mode2==true) {
+                        Log.w("GATT WRITE", "GATT onCharacteristicWrite function was called. Status = " + status);
+                    }
+
+                    //Get the data_characteristic
+                    BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
+                    BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
+
+                    //Order periodic updates
+                    gatt.setCharacteristicNotification(data_characteristic, true);
+                    List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
+                    BluetoothGattDescriptor descriptor = descriptors.get(0);
+                    descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+
+                    if (gatt.writeDescriptor(descriptor)){
+                        if(debug_mode1==true) {
+                            Log.w("BLUETOOTH_DEBUG", "Successfully wrote descriptor, you should now receive period updates");
+                        }
+
+                    }else {
+                        if(debug_mode1==true) {
+                            Log.w("BLUETOOTH_DEBUG", "Failed to write descriptor, periodic updates should FAIL :(");
+                        }
+                    }
+
+                }
+
 
                 //CALLED WHEN SUBSCRIBED AND A NEW CHARACTERISTIC ARRIVES
                 @Override
@@ -383,7 +433,13 @@ public class BLEDeviceScanActivity extends ListActivity {
             latest_Q1 = normalizedQ(q1);
             latest_Q2 = normalizedQ(q2);
             latest_Q3 = normalizedQ(q3);
+            
+            q1_text.setText(String.valueOf(latest_Q0));
+            q2_text.setText(String.valueOf(latest_Q1));
+            q3_text.setText(String.valueOf(latest_Q2));
+            q4_text.setText(String.valueOf(latest_Q3));
 
+            //Periodically print out the timestamp
             if((periodic_print%100)==0) {
                 if(debug_mode1==true) {
                     Log.w("BLUETOOTH DEBUG", "Q0: " + latest_Q0);
@@ -448,6 +504,9 @@ public class BLEDeviceScanActivity extends ListActivity {
         }
     };
 
+
+    //THESE FUNCTIONS ARE CALLED WHEN WE CLICK A BUTTON
+
     @OnClick(R.id.refreshButton)
     public void onRefreshButtonClick(View view){
         if(debug_mode1==true) {
@@ -459,4 +518,77 @@ public class BLEDeviceScanActivity extends ListActivity {
         mLeDeviceListAdapter.notifyDataSetChanged();
         scanLeDevice(true);
     }
+
+    @OnClick(R.id.BLE_BUTTON)
+    public void onBLEButtonClick(View view){
+            Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.UART_BUTTON)
+    public void onUARTButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "UART BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.QUATERNION_BUTTON)
+    public void onQuaternionButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "QUATERNION BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.MAG_BUTTON)
+    public void onMAGButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "MAG BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.LOCK_BUTTON)
+    public void onLOCKButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "LOCK BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.ERASE_BUTTON)
+    public void onERASEButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "ERASE BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.RECORD_BUTTON)
+    public void onRECORDButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "RECORD BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.PLAYBACK_BUTTON)
+    public void onPLAYBACKButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "PLAYBACK BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.LED0_BUTTON)
+    public void onLED0ButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "LED0 BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.LED1_BUTTON)
+    public void onLED1ButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "LED1 BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.EEPROM_BUTTON)
+    public void onEEPROMButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "EEPROM BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.CHARGE_INPUT)
+    public void onCHARGEButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "CHARGE BUTTON PRESSED!");
+
+    }
+
 }

@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="661a632c3b434991d6364690cbe0f786371101cc">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.4-SNAPSHOT\37f109c713b2bb42d1cb74c5371d25e2efe740e2\gdx-backend-android-1.9.4-SNAPSHOT.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="37f109c713b2bb42d1cb74c5371d25e2efe740e2">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.4-SNAPSHOT_c3a547446f7d0a3675faaa877edeebead4cc1376.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\design\24.0.0-alpha2\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dc88341cbaaac9d67a982378e5df68d8c81289ed">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha2\support-annotations-24.0.0-alpha2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" />
+        sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" />
     </item>
     <item
         jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\jars\classes.jar"
@@ -44,32 +16,11 @@
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.0.0-alpha2_a9f0be4bae419dc0c9ff525c598a6792e1f342e1.jar" />
     </item>
     <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\core\build\libs\core-1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2938f2aec67d9444ef2dfc105f595ebfb3a630a1">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
-    </item>
-    <item
         jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.4-SNAPSHOT\4a534a2154d48cea936977111ecfcbcbb8d2eb7f\gdx-1.9.4-SNAPSHOT.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="4a534a2154d48cea936977111ecfcbcbb8d2eb7f">
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-1.9.4-SNAPSHOT_16400bac3f6a0b077778354053a8c57d7e5bd7a6.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="bf5aa3b026d5b5fd9f4ab5e8cf13499b9e016dfb">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\libs\internal_impl-24.0.0-alpha2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" />
     </item>
     <item
         jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-controllers\1.9.4-SNAPSHOT\236c1983a2dc52103af64f393db63e3c5d8dd050\gdx-controllers-1.9.4-SNAPSHOT.jar"
@@ -79,18 +30,18 @@
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-1.9.4-SNAPSHOT_a990d790f421f3da780774835cec3d015a8d5c3a.jar" />
     </item>
     <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-alpha2\jars\classes.jar"
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.4-SNAPSHOT\37f109c713b2bb42d1cb74c5371d25e2efe740e2\gdx-backend-android-1.9.4-SNAPSHOT.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="2f417d93e1f62fd4fb4a2c0f3a4a882dd0ca7843">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" />
+        sha1="37f109c713b2bb42d1cb74c5371d25e2efe740e2">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.4-SNAPSHOT_c3a547446f7d0a3675faaa877edeebead4cc1376.jar" />
     </item>
     <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\classes.jar"
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\core\build\libs\core-1.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" />
+        sha1="2938f2aec67d9444ef2dfc105f595ebfb3a630a1">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
     </item>
     <item
         jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-controllers-android\1.9.4-SNAPSHOT\739a4c2e1a8c8c61b58c3299bf36bfa54f6dc90\gdx-controllers-android-1.9.4-SNAPSHOT.jar"
@@ -98,6 +49,55 @@
         revision="23.0.1"
         sha1="0739a4c2e1a8c8c61b58c3299bf36bfa54f6dc90">
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-android-1.9.4-SNAPSHOT_6e72b6cf3e0da1aba8b9332ed14355ae71a63153.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2f417d93e1f62fd4fb4a2c0f3a4a882dd0ca7843">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha2\support-annotations-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="661a632c3b434991d6364690cbe0f786371101cc">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="bf5aa3b026d5b5fd9f4ab5e8cf13499b9e016dfb">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\design\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dc88341cbaaac9d67a982378e5df68d8c81289ed">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\libs\internal_impl-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" />
     </item>
 
 </items>

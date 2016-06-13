@@ -32,51 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db3d494d-9516-4b2c-a111-f572dd413229" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/AndroidLauncher.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/AndroidLauncher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$$ViewInjector$1.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$$ViewInjector$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$$ViewInjector.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$$ViewInjector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$1.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2$1.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$3.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$4.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$id.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$integer.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$layout.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$menu.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$mipmap.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$string.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$style.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$styleable.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/simulation/Simulation.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/badlogic/invaders/simulation/Simulation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug-unaligned.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/debug_c082a35311da888b1f8a90220895fbc3e5929e16.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/debug_c082a35311da888b1f8a90220895fbc3e5929e16.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/AndroidLauncher.java" afterPath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/AndroidLauncher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$$ViewInjector.java" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$$ViewInjector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/okhttp_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/okio_1_2_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" afterPath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/android/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/android/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/generated/source/r/debug/com/badlogic/invaders/android/R.java" afterPath="$PROJECT_DIR$/android/build/generated/source/r/debug/com/badlogic/invaders/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java" afterPath="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/layout/ble_scan_activity.xml" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/layout/ble_scan_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/android.iml" afterPath="$PROJECT_DIR$/android/android.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build.gradle" afterPath="$PROJECT_DIR$/android/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="libgdx-demo-invaders.iws" />
@@ -108,25 +68,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Simulation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Simulation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5184591">
-              <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="364" column="62" selection-start-line="364" selection-start-column="62" selection-end-line="364" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BLEDeviceScanActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BLEDeviceScanActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="271" column="21" selection-start-line="271" selection-start-column="21" selection-end-line="271" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.7983051">
+              <caret line="695" column="9" selection-start-line="695" selection-start-column="9" selection-end-line="695" selection-end-column="9" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#activateBLE#0;class#BLEDeviceScanActivity#0" expanded="false" />
+                <element signature="e#4484#4510#0" expanded="true" />
                 <element signature="method#initializeVariables#0;class#BLEDeviceScanActivity#0" expanded="false" />
+                <element signature="e#20574#20768#0" expanded="true" />
+                <element signature="e#20767#20768#0" expanded="true" />
+                <element signature="e#20973#21182#0" expanded="true" />
+                <element signature="e#21181#21182#0" expanded="true" />
+                <element signature="e#22690#24668#0" expanded="true" />
+                <element signature="e#24667#24668#0" expanded="true" />
+                <element signature="e#27273#27320#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.290322">
+              <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,7 +115,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="99" column="2" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="2" />
-              <folding />
+              <folding>
+                <element signature="e#0#5080#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2529#2530#0" expanded="false" />
+                <element signature="e#2569#2570#0" expanded="false" />
+                <element signature="e#2615#2616#0" expanded="false" />
+                <element signature="e#2656#2657#0" expanded="false" />
+                <element signature="e#5000#5001#0" expanded="false" />
+                <element signature="e#5023#5024#0" expanded="false" />
+                <element signature="e#5058#5059#0" expanded="false" />
+                <element signature="e#5076#5077#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,7 +136,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="34" column="48" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="48" />
-              <folding />
+              <folding>
+                <element signature="e#0#3944#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#3007#3008#0" expanded="false" />
+                <element signature="e#3027#3028#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +151,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="22" column="8" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="8" />
-              <folding />
+              <folding>
+                <element signature="e#0#1776#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1016#1017#0" expanded="false" />
+                <element signature="e#1047#1048#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,7 +166,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="34" column="47" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="e#0#4181#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2966#2967#0" expanded="false" />
+                <element signature="e#2986#2987#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +181,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="111" column="20" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="20" />
-              <folding />
+              <folding>
+                <element signature="e#0#4266#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1750#1751#0" expanded="false" />
+                <element signature="e#1798#1799#0" expanded="false" />
+                <element signature="e#2309#2310#0" expanded="false" />
+                <element signature="e#2333#2334#0" expanded="false" />
+                <element signature="e#4212#4213#0" expanded="false" />
+                <element signature="e#4259#4260#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +200,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -196,35 +212,57 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="181" column="69" selection-start-line="181" selection-start-column="69" selection-end-line="181" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/view/WindowManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="674" column="32" selection-start-line="674" selection-start-column="32" selection-end-line="674" selection-end-column="32" />
               <folding>
-                <element signature="e#0#94440#0" expanded="false" />
+                <element signature="e#0#756#0" expanded="false" />
                 <element signature="imports" expanded="false" />
-                <element signature="e#2227#2228#0" expanded="false" />
-                <element signature="e#2262#2263#0" expanded="false" />
-                <element signature="e#2663#2664#0" expanded="false" />
-                <element signature="e#2698#2699#0" expanded="false" />
-                <element signature="e#76004#76005#0" expanded="false" />
-                <element signature="e#76041#76042#0" expanded="false" />
-                <element signature="e#76147#76148#0" expanded="false" />
-                <element signature="e#76200#76201#0" expanded="false" />
-                <element signature="e#76294#76295#0" expanded="false" />
-                <element signature="e#76344#76345#0" expanded="false" />
-                <element signature="e#76385#76386#0" expanded="false" />
-                <element signature="e#76417#76418#0" expanded="false" />
-                <element signature="e#78201#78202#0" expanded="false" />
-                <element signature="e#78260#78261#0" expanded="false" />
-                <element signature="e#78316#78317#0" expanded="false" />
-                <element signature="e#78377#78378#0" expanded="false" />
+                <element signature="e#7040#7041#0" expanded="false" />
+                <element signature="e#7064#7065#0" expanded="false" />
+                <element signature="e#7106#7107#0" expanded="false" />
+                <element signature="e#7132#7133#0" expanded="false" />
+                <element signature="e#11578#11579#0" expanded="false" />
+                <element signature="e#11602#11603#0" expanded="false" />
+                <element signature="e#11670#11671#0" expanded="false" />
+                <element signature="e#11692#11693#0" expanded="false" />
+                <element signature="e#11732#11733#0" expanded="false" />
+                <element signature="e#11751#11752#0" expanded="false" />
+                <element signature="e#11791#11792#0" expanded="false" />
+                <element signature="e#11810#11811#0" expanded="false" />
+                <element signature="e#11856#11857#0" expanded="false" />
+                <element signature="e#11878#11879#0" expanded="false" />
+                <element signature="e#11925#11926#0" expanded="false" />
+                <element signature="e#11944#11945#0" expanded="false" />
+                <element signature="e#11980#11981#0" expanded="false" />
+                <element signature="e#11997#11998#0" expanded="false" />
+                <element signature="e#12046#12047#0" expanded="false" />
+                <element signature="e#12083#12084#0" expanded="false" />
+                <element signature="e#12123#12124#0" expanded="false" />
+                <element signature="e#12169#12170#0" expanded="false" />
+                <element signature="e#12339#12340#0" expanded="false" />
+                <element signature="e#12387#12388#0" expanded="false" />
+                <element signature="e#12585#12586#0" expanded="false" />
+                <element signature="e#12608#12609#0" expanded="false" />
+                <element signature="e#13170#13171#0" expanded="false" />
+                <element signature="e#13213#13214#0" expanded="false" />
+                <element signature="e#13562#13563#0" expanded="false" />
+                <element signature="e#13614#13615#0" expanded="false" />
+                <element signature="e#13820#13821#0" expanded="false" />
+                <element signature="e#13873#13874#0" expanded="false" />
+                <element signature="e#14074#14075#0" expanded="false" />
+                <element signature="e#14105#14106#0" expanded="false" />
+                <element signature="e#14146#14147#0" expanded="false" />
+                <element signature="e#14168#14169#0" expanded="false" />
+                <element signature="e#15474#15475#0" expanded="false" />
+                <element signature="e#15492#15493#0" expanded="false" />
+                <element signature="e#15546#15547#0" expanded="false" />
+                <element signature="e#15569#15570#0" expanded="false" />
+                <element signature="e#15631#15632#0" expanded="false" />
+                <element signature="e#15662#15663#0" expanded="false" />
+                <element signature="e#15742#15743#0" expanded="false" />
+                <element signature="e#15774#15775#0" expanded="false" />
+                <element signature="e#15827#15828#0" expanded="false" />
+                <element signature="e#15857#15858#0" expanded="false" />
+                <element signature="e#15901#15902#0" expanded="false" />
+                <element signature="e#15927#15928#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2200,7 +2238,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\scott\Documents\libgdx-demo-invaders" value="10240558608882" />
+        <entry key="C:\Users\scott\Documents\libgdx-demo-invaders" value="10240989906812" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3052,7 +3090,6 @@
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/MainActivity.java" />
         <option value="$PROJECT_DIR$/android/res/values-v21/styles.xml" />
         <option value="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/values-v21/values-v21.xml" />
-        <option value="$PROJECT_DIR$/android/build.gradle" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/InvadersParcle.java" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/getQService.java" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/AndroidGetQ.java" />
@@ -3062,9 +3099,10 @@
         <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/android/res/layout/ble_scan_activity.xml" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/AndroidLauncher.java" />
-        <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" />
         <option value="$PROJECT_DIR$/core/src/com/badlogic/invaders/screens/GameLoop.java" />
         <option value="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java" />
+        <option value="$PROJECT_DIR$/android/build.gradle" />
+        <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" />
       </list>
     </option>
   </component>
@@ -3107,8 +3145,19 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libgdx-demo-invaders" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="libgdx-demo-invaders" />
@@ -3193,10 +3242,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3466,11 +3514,11 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32957748" sideWeight="0.44117647" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3489,8 +3537,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32957748" sideWeight="0.5588235" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3605,13 +3653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="54" column="28" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -3757,53 +3798,53 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/res/layout/activity_open_gl.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/res/layout/activity_open_gl.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/layout/activity_open_glvisualization.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/layout/activity_visualization.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/res/layout/ble_scan_activity.xml">
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/res/layout/ble_scan_activity.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.9.4-SNAPSHOT/c49391802d155b718f8fe8d534d30f1ac5721a95/gdx-backend-android-1.9.4-SNAPSHOT-sources.jar!/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java">
@@ -3844,7 +3885,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="181" column="69" selection-start-line="181" selection-start-column="69" selection-end-line="181" selection-end-column="69" />
-          <folding />
+          <folding>
+            <element signature="e#0#756#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7040#7041#0" expanded="false" />
+            <element signature="e#7064#7065#0" expanded="false" />
+            <element signature="e#7106#7107#0" expanded="false" />
+            <element signature="e#7132#7133#0" expanded="false" />
+            <element signature="e#11578#11579#0" expanded="false" />
+            <element signature="e#11602#11603#0" expanded="false" />
+            <element signature="e#11670#11671#0" expanded="false" />
+            <element signature="e#11692#11693#0" expanded="false" />
+            <element signature="e#11732#11733#0" expanded="false" />
+            <element signature="e#11751#11752#0" expanded="false" />
+            <element signature="e#11791#11792#0" expanded="false" />
+            <element signature="e#11810#11811#0" expanded="false" />
+            <element signature="e#11856#11857#0" expanded="false" />
+            <element signature="e#11878#11879#0" expanded="false" />
+            <element signature="e#11925#11926#0" expanded="false" />
+            <element signature="e#11944#11945#0" expanded="false" />
+            <element signature="e#11980#11981#0" expanded="false" />
+            <element signature="e#11997#11998#0" expanded="false" />
+            <element signature="e#12046#12047#0" expanded="false" />
+            <element signature="e#12083#12084#0" expanded="false" />
+            <element signature="e#12123#12124#0" expanded="false" />
+            <element signature="e#12169#12170#0" expanded="false" />
+            <element signature="e#12339#12340#0" expanded="false" />
+            <element signature="e#12387#12388#0" expanded="false" />
+            <element signature="e#12585#12586#0" expanded="false" />
+            <element signature="e#12608#12609#0" expanded="false" />
+            <element signature="e#13170#13171#0" expanded="false" />
+            <element signature="e#13213#13214#0" expanded="false" />
+            <element signature="e#13562#13563#0" expanded="false" />
+            <element signature="e#13614#13615#0" expanded="false" />
+            <element signature="e#13820#13821#0" expanded="false" />
+            <element signature="e#13873#13874#0" expanded="false" />
+            <element signature="e#14074#14075#0" expanded="false" />
+            <element signature="e#14105#14106#0" expanded="false" />
+            <element signature="e#14146#14147#0" expanded="false" />
+            <element signature="e#14168#14169#0" expanded="false" />
+            <element signature="e#15474#15475#0" expanded="false" />
+            <element signature="e#15492#15493#0" expanded="false" />
+            <element signature="e#15546#15547#0" expanded="false" />
+            <element signature="e#15569#15570#0" expanded="false" />
+            <element signature="e#15631#15632#0" expanded="false" />
+            <element signature="e#15662#15663#0" expanded="false" />
+            <element signature="e#15742#15743#0" expanded="false" />
+            <element signature="e#15774#15775#0" expanded="false" />
+            <element signature="e#15827#15828#0" expanded="false" />
+            <element signature="e#15857#15858#0" expanded="false" />
+            <element signature="e#15901#15902#0" expanded="false" />
+            <element signature="e#15927#15928#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3852,17 +3944,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="271" column="21" selection-start-line="271" selection-start-column="21" selection-end-line="271" selection-end-column="21" />
           <folding>
-            <element signature="method#activateBLE#0;class#BLEDeviceScanActivity#0" expanded="false" />
-            <element signature="method#initializeVariables#0;class#BLEDeviceScanActivity#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3871,7 +3954,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="111" column="20" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#4266#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1750#1751#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="e#2309#2310#0" expanded="false" />
+            <element signature="e#2333#2334#0" expanded="false" />
+            <element signature="e#4212#4213#0" expanded="false" />
+            <element signature="e#4259#4260#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3879,7 +3971,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="48" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="e#0#3944#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3007#3008#0" expanded="false" />
+            <element signature="e#3027#3028#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3887,7 +3984,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#0#1776#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1047#1048#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3895,7 +3997,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="47" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#0#4181#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2966#2967#0" expanded="false" />
+            <element signature="e#2986#2987#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3903,15 +4010,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="2" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#5080#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2529#2530#0" expanded="false" />
+            <element signature="e#2569#2570#0" expanded="false" />
+            <element signature="e#2615#2616#0" expanded="false" />
+            <element signature="e#2656#2657#0" expanded="false" />
+            <element signature="e#5000#5001#0" expanded="false" />
+            <element signature="e#5023#5024#0" expanded="false" />
+            <element signature="e#5058#5059#0" expanded="false" />
+            <element signature="e#5076#5077#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.290322">
+          <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5184591">
-          <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="364" column="62" selection-start-line="364" selection-start-column="62" selection-end-line="364" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7983051">
+          <caret line="695" column="9" selection-start-line="695" selection-start-column="9" selection-end-line="695" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#activateBLE#0;class#BLEDeviceScanActivity#0" expanded="false" />
+            <element signature="e#4484#4510#0" expanded="true" />
+            <element signature="method#initializeVariables#0;class#BLEDeviceScanActivity#0" expanded="false" />
+            <element signature="e#20574#20768#0" expanded="true" />
+            <element signature="e#20767#20768#0" expanded="true" />
+            <element signature="e#20973#21182#0" expanded="true" />
+            <element signature="e#21181#21182#0" expanded="true" />
+            <element signature="e#22690#24668#0" expanded="true" />
+            <element signature="e#24667#24668#0" expanded="true" />
+            <element signature="e#27273#27320#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

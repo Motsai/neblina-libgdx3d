@@ -14,6 +14,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -23,6 +25,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,6 +49,11 @@ public class BLEDeviceScanActivity extends ListActivity {
     public static float latest_Q1 = 0.0f;
     public static float latest_Q2 = 0.0f;
     public static float latest_Q3 = 0.0f;
+    public static String Q0_string = "";
+    public static String Q1_string = "";
+    public static String Q2_string = "";
+    public static String Q3_string = "";
+
     public static long timestamp_N =0;
 
     private static final int REQUEST_ENABLE_BT = 0;
@@ -287,31 +303,12 @@ public class BLEDeviceScanActivity extends ListActivity {
                         Log.w("GATT TAG","Characteristic DID NOT WRITE :~( ");
                     }
 
-//                  boolean didWriteGattCharacteristic = mBluetoothGatt.writeCharacteristic(ctrl_characteristic);
+                    //Write the characteristic
                     boolean didWriteGattCharacteristic = gatt.writeCharacteristic(ctrl_characteristic);
-
                     //Check to see if the write worked
                     if(!didWriteGattCharacteristic){
                         Log.w("GATT TAG","GATTCharacteristic FAIL :O ");
                     }
-
-//                    //Order periodic updates
-//                    gatt.setCharacteristicNotification(data_characteristic, true);
-//                    List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
-//                    BluetoothGattDescriptor descriptor = descriptors.get(0);
-//
-//                    descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
-//
-//                    if (gatt.writeDescriptor(descriptor)){
-//                        if(debug_mode1==true) {
-//                            Log.w("BLUETOOTH_DEBUG", "Successfully wrote descriptor");
-//                        }
-//
-//                    }else {
-//                        if(debug_mode1==true) {
-//                            Log.w("BLUETOOTH_DEBUG", "Failed to write descriptor");
-//                        }
-//                    }
                 }
 
                 //CALLED WHEN CHARACTERISTICS ARE READ
@@ -420,11 +417,23 @@ public class BLEDeviceScanActivity extends ListActivity {
             latest_Q1 = normalizedQ(q1);
             latest_Q2 = normalizedQ(q2);
             latest_Q3 = normalizedQ(q3);
-            
-            q1_text.setText(String.valueOf(latest_Q0));
-            q2_text.setText(String.valueOf(latest_Q1));
-            q3_text.setText(String.valueOf(latest_Q2));
-            q4_text.setText(String.valueOf(latest_Q3));
+
+            //Create a string version
+            Q0_string = String.valueOf(latest_Q0);
+            Q1_string = String.valueOf(latest_Q1);
+            Q2_string = String.valueOf(latest_Q2);
+            Q3_string = String.valueOf(latest_Q3);
+
+            q1_text.setText(Q0_string);
+            q2_text.setText(Q1_string);
+            q3_text.setText(Q2_string);
+            q4_text.setText(Q3_string);
+
+            //TODO: Send Data To The Cloud
+            sendQuaternionsToCloud(Q0_string,Q1_string,Q2_string,Q3_string);
+
+
+
 
             //Periodically print out the timestamp
             if((periodic_print%100)==0) {
@@ -441,6 +450,74 @@ public class BLEDeviceScanActivity extends ListActivity {
             }
             sendBroadcast(intent);
         }
+    }
+
+    private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
+        String apiKey = "b7721b89f28c6045846cfbc72c2c545c";
+        String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
+                "/" + q0_string + "," + q1_string + "," + q2_string + "," + q3_string;
+
+        if (isNetworkAvailable()) {
+
+
+            OkHttpClient client = new OkHttpClient();
+
+            Request request = new Request.Builder()
+                    .url(forecastURL)
+                    .build();
+
+            Call call = client.newCall(request);
+            call.enqueue(new Callback() {
+                @Override
+                public void onFailure(Request request, IOException e) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //TODO: Print and error
+                        }
+                    });
+                    //TODO: Print and error
+                }
+
+                @Override
+                public void onResponse(Response response) throws IOException {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //TODO: Do something here on UI thread
+                        }
+                    });
+                    try {
+                        String jsonData = response.body().string();
+                        Log.i(TAG, response.body().string());
+                        if (response.isSuccessful()) {
+                            int i = parseJSONResponse(jsonData);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+//                                    updateDisplay();
+                                }
+                            });
+
+                        } else {
+//                            alertUserAboutError();
+                        }
+
+                    } catch (IOException e) {
+                        Log.e(TAG, "IOException caught: ", e);
+                    } catch (JSONException e) {
+                        Log.e(TAG, "JSONException caught: ", e);
+                    }
+                }
+
+
+            });
+        }
+        else {
+            Toast.makeText(this, "Network Is Unavailable!!!", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 
     private float normalizedQ(byte[] q) {
@@ -577,4 +654,44 @@ public class BLEDeviceScanActivity extends ListActivity {
 
     }
 
-}
+
+    private boolean isNetworkAvailable() {
+
+        ConnectivityManager manager = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+        boolean isAvailable = false;
+        if(networkInfo != null && networkInfo.isConnected()) {
+            isAvailable = true;
+
+        }
+        else {
+            Toast.makeText(this,getString(R.string.network_unavailable_message),Toast.LENGTH_LONG).show();
+        }
+        return isAvailable;
+    }
+
+    private int parseJSONResponse(String jsonData)throws JSONException{
+
+//        Example JSON Parsing Code
+//        JSONObject response = new JSONObject(jsonData);
+//        String timezone = response.getString("timezone");
+//        JSONObject daily = response.getJSONObject("daily");
+//        JSONArray data = daily.getJSONArray("data");
+//
+//        String[] days = new String[data.length()];
+//
+//        for (int i = 0; i < data.length(); i++){
+//            JSONObject jsonDay = data.getJSONObject(i);
+//            String value = new String();
+//
+//            value = jsonDay.getString("summary");
+//            value = jsonDay.getString("icon");
+//            value = jsonDay.getDouble("temperatureMax");
+//            value = (jsonDay.getLong("time");
+//            value = (timezone);
+//
+//            days[i] = value;
+        return 0;
+        }
+    }

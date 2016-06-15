@@ -84,8 +84,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="appcompat-v7-24.0.0-alpha2" level="project" />
     <orderEntry type="library" exported="" name="gdx-controllers-1.9.4-SNAPSHOT" level="project" />
-    <orderEntry type="library" exported="" name="gdx-backend-android-1.9.4-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="okio-1.2.0" level="project" />
+    <orderEntry type="library" exported="" name="gdx-backend-android-1.9.4-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="okhttp-2.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-24.0.0-alpha2" level="project" />
     <orderEntry type="library" exported="" name="gdx-1.9.4-SNAPSHOT" level="project" />

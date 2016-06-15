@@ -27,8 +27,10 @@ import android.widget.Toast;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
 import org.json.JSONException;
@@ -81,6 +83,11 @@ public class BLEDeviceScanActivity extends ListActivity {
     private final static String TAG = BLEDeviceScanActivity.class.getSimpleName();
     private int mConnectionState = STATE_DISCONNECTED;
     public static final String ACTION_DATA_WRITE = "android.ble.common.ACTION_DATA_WRITE";
+    public static final MediaType MEDIA_TYPE_MARKDOWN
+            = MediaType.parse("text/x-markdown; charset=utf-8");
+    public static final MediaType JSON
+            = MediaType.parse("application/json; charset=utf-8");
+
 
     //NEBLINA CUSTOM UUIDs
     public static final UUID NEB_SERVICE_UUID = UUID.fromString("0df9f021-1532-11e5-8960-0002a5d5c51b");
@@ -592,17 +599,41 @@ public class BLEDeviceScanActivity extends ListActivity {
     //************************************ HTTP NETWORKING CODE *****************************************************//
     private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
         String apiKey = "E3VK2KDK3IBGK8HT";
-        String forecastURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=1";
 
+        //Example GET URL - This worked!
+//        String databaseURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=1";
+
+        //Example POST URL
+        String databaseURL ="https://api.thingspeak.com/update.json";
+
+        //Send Quaternions
 //        String apiKey = "b7721b89f28c6045846cfbc72c2c545c";
-//        String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
+//        String databaseURL = "https://api.forecast.io/forecast/" + apiKey +
 //                "/" + q0_string + "," + q1_string + "," + q2_string + "," + q3_string;
-        
+
         if (isNetworkAvailable()) {
             OkHttpClient client = new OkHttpClient();
 
+//            String postBody = ""
+//                    + "{\n"
+//                    + "\"api_key\":\"E3VK2KDK3IBGK8HT\",\n"
+//                    + "\"field1\":\"POST TEST\",\n"
+//                    + "\"field2\":\"male\",\n"
+//                    + "\"field3\":\"yes\"\n"
+//                    + "}\n";
+
+            String postBody = "{ \"api_key\":\"E3VK2KDK3IBGK8HT\"," +
+                    " \"field1\":\"Scott\"," +
+                    " \"field2\":\"Male\"," +
+                    " \"field3\":\"Yes\"" +
+                    "}";
+
+            Log.w("HTTP_DEBUG", "sending: " + postBody);
+
             Request request = new Request.Builder()
-                    .url(forecastURL)
+                    .url(databaseURL)
+                    .header("Content-Type", "application/json")
+                    .post(RequestBody.create(JSON, postBody))
                     .build();
             Call call = client.newCall(request);
             call.enqueue(new Callback() {
@@ -626,6 +657,7 @@ public class BLEDeviceScanActivity extends ListActivity {
                     });
                     try {
                         String jsonData = response.body().string();
+                        Log.w("HTTP_DEBUG", jsonData);
 //                        Log.i(TAG, response.body().string()); //This was the offending clause
                         if (response.isSuccessful()) {
                             int i = parseJSONResponse(jsonData);

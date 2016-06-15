@@ -592,19 +592,18 @@ public class BLEDeviceScanActivity extends ListActivity {
     //************************************ HTTP NETWORKING CODE *****************************************************//
     private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
         String apiKey = "E3VK2KDK3IBGK8HT";
-        String forecastURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=0";
+        String forecastURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=1";
 
 //        String apiKey = "b7721b89f28c6045846cfbc72c2c545c";
 //        String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
 //                "/" + q0_string + "," + q1_string + "," + q2_string + "," + q3_string;
-
+        
         if (isNetworkAvailable()) {
             OkHttpClient client = new OkHttpClient();
 
             Request request = new Request.Builder()
                     .url(forecastURL)
                     .build();
-
             Call call = client.newCall(request);
             call.enqueue(new Callback() {
                 @Override
@@ -612,10 +611,10 @@ public class BLEDeviceScanActivity extends ListActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            //TODO: Print and error
+                            Log.w("HTTP_DEBUG", "onFailure's runOnUiThread was called");
                         }
                     });
-                    //TODO: Print and error
+                    Log.w("HTTP_DEBUG", "onFailure was called");
                 }
 
                 @Override
@@ -623,23 +622,22 @@ public class BLEDeviceScanActivity extends ListActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            //TODO: Do something here on UI thread
                         }
                     });
                     try {
                         String jsonData = response.body().string();
-                        Log.i(TAG, response.body().string());
+//                        Log.i(TAG, response.body().string()); //This was the offending clause
                         if (response.isSuccessful()) {
                             int i = parseJSONResponse(jsonData);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-//                                    updateDisplay();
+                                    Log.w("HTTP_DEBUG", "Makes it to the second run()");
                                 }
                             });
 
                         } else {
-//                            alertUserAboutError();
+                           Log.w("HTTP_DEBUG", "HMMMMM Something bad happened here :(");
                         }
 
                     } catch (IOException e) {

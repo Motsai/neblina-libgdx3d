@@ -452,73 +452,6 @@ public class BLEDeviceScanActivity extends ListActivity {
         }
     }
 
-    private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
-        String apiKey = "b7721b89f28c6045846cfbc72c2c545c";
-        String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
-                "/" + q0_string + "," + q1_string + "," + q2_string + "," + q3_string;
-
-        if (isNetworkAvailable()) {
-
-
-            OkHttpClient client = new OkHttpClient();
-
-            Request request = new Request.Builder()
-                    .url(forecastURL)
-                    .build();
-
-            Call call = client.newCall(request);
-            call.enqueue(new Callback() {
-                @Override
-                public void onFailure(Request request, IOException e) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            //TODO: Print and error
-                        }
-                    });
-                    //TODO: Print and error
-                }
-
-                @Override
-                public void onResponse(Response response) throws IOException {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            //TODO: Do something here on UI thread
-                        }
-                    });
-                    try {
-                        String jsonData = response.body().string();
-                        Log.i(TAG, response.body().string());
-                        if (response.isSuccessful()) {
-                            int i = parseJSONResponse(jsonData);
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-//                                    updateDisplay();
-                                }
-                            });
-
-                        } else {
-//                            alertUserAboutError();
-                        }
-
-                    } catch (IOException e) {
-                        Log.e(TAG, "IOException caught: ", e);
-                    } catch (JSONException e) {
-                        Log.e(TAG, "JSONException caught: ", e);
-                    }
-                }
-
-
-            });
-        }
-        else {
-            Toast.makeText(this, "Network Is Unavailable!!!", Toast.LENGTH_SHORT).show();
-        }
-
-
-    }
 
     private float normalizedQ(byte[] q) {
         if(q.length==2){
@@ -586,6 +519,8 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onBLEButtonClick(View view){
             Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
 
+        sendQuaternionsToCloud("1","1","1","1");
+
     }
 
     @OnClick(R.id.UART_BUTTON)
@@ -652,6 +587,72 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onCHARGEButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "CHARGE BUTTON PRESSED!");
 
+    }
+
+    //************************************ HTTP NETWORKING CODE *****************************************************//
+    private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
+        String apiKey = "E3VK2KDK3IBGK8HT";
+        String forecastURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=0";
+
+//        String apiKey = "b7721b89f28c6045846cfbc72c2c545c";
+//        String forecastURL = "https://api.forecast.io/forecast/" + apiKey +
+//                "/" + q0_string + "," + q1_string + "," + q2_string + "," + q3_string;
+
+        if (isNetworkAvailable()) {
+            OkHttpClient client = new OkHttpClient();
+
+            Request request = new Request.Builder()
+                    .url(forecastURL)
+                    .build();
+
+            Call call = client.newCall(request);
+            call.enqueue(new Callback() {
+                @Override
+                public void onFailure(Request request, IOException e) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //TODO: Print and error
+                        }
+                    });
+                    //TODO: Print and error
+                }
+
+                @Override
+                public void onResponse(Response response) throws IOException {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //TODO: Do something here on UI thread
+                        }
+                    });
+                    try {
+                        String jsonData = response.body().string();
+                        Log.i(TAG, response.body().string());
+                        if (response.isSuccessful()) {
+                            int i = parseJSONResponse(jsonData);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+//                                    updateDisplay();
+                                }
+                            });
+
+                        } else {
+//                            alertUserAboutError();
+                        }
+
+                    } catch (IOException e) {
+                        Log.e(TAG, "IOException caught: ", e);
+                    } catch (JSONException e) {
+                        Log.e(TAG, "JSONException caught: ", e);
+                    }
+                }
+            });
+        }
+        else {
+            Toast.makeText(this, "Network Is Unavailable!!!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

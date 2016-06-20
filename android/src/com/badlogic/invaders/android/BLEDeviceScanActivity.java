@@ -598,13 +598,16 @@ public class BLEDeviceScanActivity extends ListActivity {
 
     //************************************ HTTP NETWORKING CODE *****************************************************//
     private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
-        String apiKey = "E3VK2KDK3IBGK8HT";
-
         //Example GET URL - This worked!
 //        String databaseURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=1";
 
-        //Example POST URL
-        String databaseURL ="https://api.thingspeak.com/update.json";
+        //Example POST URL - This worked!
+//        String databaseURL ="https://api.thingspeak.com/update.json";
+
+        //Example AWS IoT URL - Returns "Missing Authentication Token" error
+//        String databaseURL = "https://A13X9WUMZAX5RM.iot.us-east-1.amazonaws.com/things/Neblina_Test1/shadow";
+
+        String databaseURL = "https://j4pguaz22a.execute-api.us-east-1.amazonaws.com/prod/dynamodump";
 
         //Send Quaternions
 //        String apiKey = "b7721b89f28c6045846cfbc72c2c545c";
@@ -614,18 +617,12 @@ public class BLEDeviceScanActivity extends ListActivity {
         if (isNetworkAvailable()) {
             OkHttpClient client = new OkHttpClient();
 
-//            String postBody = ""
-//                    + "{\n"
-//                    + "\"api_key\":\"E3VK2KDK3IBGK8HT\",\n"
-//                    + "\"field1\":\"POST TEST\",\n"
-//                    + "\"field2\":\"male\",\n"
-//                    + "\"field3\":\"yes\"\n"
-//                    + "}\n";
-
-            String postBody = "{ \"api_key\":\"E3VK2KDK3IBGK8HT\"," +
-                    " \"field1\":\"Scott\"," +
-                    " \"field2\":\"Male\"," +
-                    " \"field3\":\"Yes\"" +
+            String postBody = "{" +
+                    " \"timestamp\":\"00000069\"," +
+                    " \"q1\":\"1\"," +
+                    " \"q2\":\"2\"," +
+                    " \"q3\":\"3\"," +
+                    " \"q4\":\"4\"" +
                     "}";
 
             Log.w("HTTP_DEBUG", "sending: " + postBody);

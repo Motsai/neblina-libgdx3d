@@ -1,10 +1,11 @@
 <component name="libraryTable">
   <library name="gdx-controllers-gwt-1.9.4-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/8b6351c12479c95597ee2ad7074c0a17a745a8f/gdx-controllers-gwt-1.9.4-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/1eb2987030e39ac4dff33c5552efdff237c9c1bb/gdx-controllers-gwt-1.9.4-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/969e740ea74efc3bbcddf6a297b23b4fe853f362/gdx-controllers-gwt-1.9.4-SNAPSHOT-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/724f9c507883206efcdc75104d7021ae29ab423/gdx-controllers-gwt-1.9.4-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>

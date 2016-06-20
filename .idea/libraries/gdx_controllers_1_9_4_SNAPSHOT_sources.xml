@@ -6,7 +6,6 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/536f15847d3e2a3b8aa0c9660410f3bbdceb580a/gdx-controllers-1.9.4-SNAPSHOT-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/36917a7d3121199869a2dc6a7ed9f54bbf06a3ca/gdx-controllers-1.9.4-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

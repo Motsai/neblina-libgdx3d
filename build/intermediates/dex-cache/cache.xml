@@ -2,48 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\design\24.0.0-alpha2\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dc88341cbaaac9d67a982378e5df68d8c81289ed">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-controllers-android\1.9.4-SNAPSHOT\739a4c2e1a8c8c61b58c3299bf36bfa54f6dc90\gdx-controllers-android-1.9.4-SNAPSHOT.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0739a4c2e1a8c8c61b58c3299bf36bfa54f6dc90">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-android-1.9.4-SNAPSHOT_6e72b6cf3e0da1aba8b9332ed14355ae71a63153.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\core\build\libs\core-1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6709fa888e60808cb7089313def5efd1991f8596">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.2.0\c0b52915a48fa91b1b94a28d4a2997bac5f524df\okio-1.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\okio-1.2.0_5e098cc88da152351ae960269ac4d62e106c8540.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha2\support-annotations-24.0.0-alpha2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\libs\internal_impl-24.0.0-alpha2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" />
-    </item>
-    <item
         jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -51,11 +9,11 @@
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" />
     </item>
     <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.4-SNAPSHOT\37f109c713b2bb42d1cb74c5371d25e2efe740e2\gdx-backend-android-1.9.4-SNAPSHOT.jar"
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-machinelearning\2.2.18\a137d68e6144ee590dd35dc9856e841392bc8521\aws-android-sdk-machinelearning-2.2.18.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="37f109c713b2bb42d1cb74c5371d25e2efe740e2">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.4-SNAPSHOT_c3a547446f7d0a3675faaa877edeebead4cc1376.jar" />
+        sha1="a137d68e6144ee590dd35dc9856e841392bc8521">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-machinelearning-2.2.18_3f7e5cb6d146528885f9a328d5b09356e799df84.jar" />
     </item>
     <item
         jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.2.0\959c454243581fdf730abfd4f4745441724bcf2c\okhttp-2.2.0.jar"
@@ -65,18 +23,11 @@
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\okhttp-2.2.0_18e57c64e5a4ab0ea2085bc41eaa6621146b3f0d.jar" />
     </item>
     <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-controllers\1.9.4-SNAPSHOT\236c1983a2dc52103af64f393db63e3c5d8dd050\gdx-controllers-1.9.4-SNAPSHOT.jar"
+        jar="C:\Users\scott\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha2\support-annotations-24.0.0-alpha2.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="236c1983a2dc52103af64f393db63e3c5d8dd050">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-1.9.4-SNAPSHOT_a990d790f421f3da780774835cec3d015a8d5c3a.jar" />
-    </item>
-    <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" />
+        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" />
     </item>
     <item
         jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\jars\classes.jar"
@@ -86,11 +37,95 @@
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" />
     </item>
     <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-controllers\1.9.4-SNAPSHOT\552d6354fb1cb545933c22c2a35ea675ac0be2a8\gdx-controllers-1.9.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="552d6354fb1cb545933c22c2a35ea675ac0be2a8">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-1.9.4-SNAPSHOT_f77b331e5f5c869f4d3b748f2ab34f064d71b6fa.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\design\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dc88341cbaaac9d67a982378e5df68d8c81289ed">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb-mapper\2.2.18\afef7014288ac5d34e518f4ee82f32545d2115d\aws-android-sdk-ddb-mapper-2.2.18.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0afef7014288ac5d34e518f4ee82f32545d2115d">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-mapper-2.2.18_77e9c09174e7f61f0019b5841365f3db7c66c5f9.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.2.18\802a5fa1642253476592c2ee55930578e499fe63\aws-android-sdk-core-2.2.18.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="802a5fa1642253476592c2ee55930578e499fe63">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-core-2.2.18_970b7bf1245b15e13cfe02a4924ac8e2f2a7ef82.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-controllers-android\1.9.4-SNAPSHOT\13e1169d6f826392148b384af077c4c70545ae6d\gdx-controllers-android-1.9.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="13e1169d6f826392148b384af077c4c70545ae6d">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-controllers-android-1.9.4-SNAPSHOT_c793230802734d899affa560137bcb232221b0e2.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\libs\internal_impl-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\Documents\libgdx-demo-invaders\core\build\libs\core-1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="49e6417eb5dec5bebd51b79b77d4d6a700966154">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb\2.2.18\88caede5170508d7f3a7d1297eab570d9f80c26c\aws-android-sdk-ddb-2.2.18.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="88caede5170508d7f3a7d1297eab570d9f80c26c">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-2.2.18_355053c8f4efe85bea91d31dd00c4a043e47b1fb.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.2.0\c0b52915a48fa91b1b94a28d4a2997bac5f524df\okio-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\okio-1.2.0_5e098cc88da152351ae960269ac4d62e106c8540.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gson-2.2.4_ecc6d317e36a59f06e4d0b8bae45d954ba3b4a6f.jar" />
+    </item>
+    <item
         jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.4-SNAPSHOT\6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1\gdx-1.9.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-1.9.4-SNAPSHOT_475d9df0b2254d1fafc79a2aaea01468f32106e6.jar" />
     </item>
     <item
         jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-alpha2\jars\classes.jar"
@@ -100,11 +135,25 @@
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" />
     </item>
     <item
-        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.4-SNAPSHOT\4a534a2154d48cea936977111ecfcbcbb8d2eb7f\gdx-1.9.4-SNAPSHOT.jar"
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.2.18\2b3576bbfdb287d7f1f3ec5f17ccfce41fb0d96\aws-android-sdk-s3-2.2.18.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="4a534a2154d48cea936977111ecfcbcbb8d2eb7f">
-        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-1.9.4-SNAPSHOT_16400bac3f6a0b077778354053a8c57d7e5bd7a6.jar" />
+        sha1="02b3576bbfdb287d7f1f3ec5f17ccfce41fb0d96">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-s3-2.2.18_965755d774de4002bc260082d3e5fbebaa3508ac.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.4-SNAPSHOT\37a19c1cc83cb0207447b761bf2fbe08e7237c9d\gdx-backend-android-1.9.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="37a19c1cc83cb0207447b761bf2fbe08e7237c9d">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.4-SNAPSHOT_faf9342434f26d43b60d143d183d4ac6d2ae8b29.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognito\2.2.18\c4bf9dca3b2cbf00f5a3c7c95d4b69f4f14094dd\aws-android-sdk-cognito-2.2.18.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c4bf9dca3b2cbf00f5a3c7c95d4b69f4f14094dd">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-cognito-2.2.18_df1c91a2b89e299ecafeb99f51750281bacff84e.jar" />
     </item>
     <item
         jar="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\jars\classes.jar"
@@ -112,6 +161,13 @@
         revision="23.0.1"
         sha1="df7f6513d6e2aaa302bbac654807c6129b517090">
         <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.0.0-alpha2_a9f0be4bae419dc0c9ff525c598a6792e1f342e1.jar" />
+    </item>
+    <item
+        jar="C:\Users\scott\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-apigateway-core\2.2.18\6c7b7ba37e260c1a4723a8c30cc36402162fd18d\aws-android-sdk-apigateway-core-2.2.18.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6c7b7ba37e260c1a4723a8c30cc36402162fd18d">
+        <dex dex="C:\Users\scott\Documents\libgdx-demo-invaders\android\build\intermediates\pre-dexed\debug\aws-android-sdk-apigateway-core-2.2.18_606f332d5fb040e5a61d0d76f61c72f6db18151a.jar" />
     </item>
 
 </items>

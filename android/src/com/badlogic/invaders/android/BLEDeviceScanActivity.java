@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -25,6 +26,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.mobileconnectors.cognito.CognitoSyncManager;
+import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
+import com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapper;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.MediaType;
@@ -70,6 +77,7 @@ public class BLEDeviceScanActivity extends ListActivity {
     private int periodic_print = 0;
     public static boolean debug_mode1 = true;
     public static boolean debug_mode2 = true;
+    public String identityID = "";
 
     //GATT CALLBACK VARIABLES
     private static final int STATE_DISCONNECTED = 0;
@@ -110,6 +118,7 @@ public class BLEDeviceScanActivity extends ListActivity {
         ButterKnife.inject(this);
         activateBLE();
         initializeVariables();
+        new getAWSID().execute("gogogo!");
         scanLeDevice(true);
     }
 
@@ -439,9 +448,6 @@ public class BLEDeviceScanActivity extends ListActivity {
             //TODO: Send Data To The Cloud
             sendQuaternionsToCloud(Q0_string,Q1_string,Q2_string,Q3_string);
 
-
-
-
             //Periodically print out the timestamp
             if((periodic_print%100)==0) {
                 if(debug_mode1==true) {
@@ -526,7 +532,7 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onBLEButtonClick(View view){
             Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
 
-        sendQuaternionsToCloud("1","1","1","1");
+        sendQuaternionsToCloud("1", "1", "1", "1");
 
     }
 
@@ -722,4 +728,91 @@ public class BLEDeviceScanActivity extends ListActivity {
 //            days[i] = value;
         return 0;
         }
+
+    private class getAWSID extends AsyncTask<String, Void, Void> {
+
+        @Override
+        protected Void doInBackground(String... params) {
+            CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
+                    getApplicationContext(),
+                    "us-east-1:6e702b0c-80ab-4461-9ec3-239f1d163cd5", // Identity Pool ID
+                    Regions.US_EAST_1 // Region
+            );
+
+            identityID = credentialsProvider.getIdentityId();
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Log.w("LogTag", "my ID is " + identityID);
+                        }
+            });
+
+
+
+            // Initialize the Cognito Sync client
+        CognitoSyncManager syncClient = new CognitoSyncManager(
+                getApplicationContext(),
+                Regions.US_EAST_1, // Region
+                credentialsProvider);
+
+// Create a record in a dataset and synchronize with the server
+        com.amazonaws.mobileconnectors.cognito.Dataset dataset = syncClient.openOrCreateDataset("myDataset");
+        dataset.put("myKey", "myValue");
+        dataset.synchronize(new DefaultSyncCallback() {
+            @Override
+            public void onSuccess(com.amazonaws.mobileconnectors.cognito.Dataset dataset, List newRecords) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.w("LogTag", "Creating a Record was successful!" + identityID);
+                    }
+                });
+            }
+        });
+
+
+            AmazonDynamoDBClient ddbClient = new AmazonDynamoDBClient(credentialsProvider);
+
+            DynamoDBMapper mapper = new DynamoDBMapper(ddbClient);
+
+            //WRITE an object to DynamoDB
+//            Book book = new Book();
+//            book.setTitle("Eurika!");
+//            book.setAuthor("Archimedes");
+//            book.setPrice(800);
+//            book.setIsbn("1111111");
+//            book.setHardCover(false);
+//            mapper.save(book);
+
+            Quaternions quaternions = new Quaternions();
+            quaternions.setQ1(0.01);
+            quaternions.setQ2(0.02);
+            quaternions.setQ3(0.03);
+            quaternions.setQ4(0.04);
+            quaternions.setTimestamp("00111");
+
+            mapper.save(quaternions);
+
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Log.w("LogTag", "so basically the problem is here");
+                }
+            });
+
+            //READ an object from DynamoDB
+//            final Book selectedBook = mapper.load(Book.class, 001);
+//            runOnUiThread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    Log.w("LogTag", "Book Value: " + selectedBook.getAuthor());
+//                }
+//            });
+            return null;
+        }
     }
+    }
+
+

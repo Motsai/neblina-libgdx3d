@@ -6,7 +6,6 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.9.4-SNAPSHOT/1acf47bd1a51697eb116f93695be32f8b84bf958/gdx-backend-gwt-1.9.4-SNAPSHOT-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.9.4-SNAPSHOT/8240d0fdb63c9c2acaa78b05e73b70f3fdaf7fa8/gdx-backend-gwt-1.9.4-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -31,16 +31,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db3d494d-9516-4b2c-a111-f572dd413229" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Book.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Quaternions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_apigateway_core_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_cognito_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_core_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_ddb_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_ddb_mapper_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_machinelearning_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aws_android_sdk_s3_2_2_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_2_4.xml" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\animated_vector_drawable_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\appcompat_v7_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_apigateway_core_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_cognito_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_core_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_ddb_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_ddb_mapper_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_machinelearning_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\aws_android_sdk_s3_2_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\butterknife_6_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\core_core_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\design_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_android_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_gwt_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_gwt_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_lwjgl_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_backend_robovm_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_android_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_desktop_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_gwt_1_9_4_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_gwt_1_9_4_SNAPSHOT_sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_controllers_platform_1_9_4_SNAPSHOT_natives_desktop.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_platform_1_9_4_SNAPSHOT_natives_desktop.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gdx_platform_1_9_4_SNAPSHOT_natives_ios.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gson_2_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gwt_servlet_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\gwt_user_2_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_2_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_platform_2_0_5_natives_linux.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_platform_2_0_5_natives_osx.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jinput_platform_2_0_5_natives_windows.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jlayer_1_0_1_gdx.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jorbis_0_0_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\json_20090211.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\jutils_1_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_2_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_platform_2_9_2_natives_linux.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_platform_2_9_2_natives_osx.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_platform_2_9_2_natives_windows.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\lwjgl_util_2_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\okhttp_2_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\okio_1_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\recyclerview_v7_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_cocoatouch_1_12_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_cocoatouch_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_objc_1_12_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_objc_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_rt_1_12_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\robovm_rt_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\support_annotations_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\support_v4_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\support_vector_drawable_24_0_0_alpha2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\validation_api_1_0_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\scott\Documents\libgdx-demo-invaders\.idea\libraries\validation_api_1_0_0_GA_sources.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$1.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2$1.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity$2.class" />
@@ -49,42 +97,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity.class" afterPath="$PROJECT_DIR$/android/build/intermediates/classes/debug/com/badlogic/invaders/android/BLEDeviceScanActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug-unaligned.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/butterknife-6.1.0_e500a356f097b8992bbcc18113c4940c3e552edc.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0-alpha2_a9f0be4bae419dc0c9ff525c598a6792e1f342e1.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0-alpha2_a9f0be4bae419dc0c9ff525c598a6792e1f342e1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0-alpha2_efd5cea2853d4db604aa7bad79a5d143ab949e85.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0-alpha2_739b929dc8212cbee91f048811af3038e546828f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0-alpha2_33d0ac2a4ce123cd4471d5db01c9ccb24e7f4f04.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0-alpha2_34fe8cc3469289d90f2e295d1983516cbf9eac24.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0-alpha2_0b80ef541d8cf397aecd81960f13c067943d390f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/core-1.0_c8de98ee08e61f5ed192da0f166e603c237fcc46.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/debug_c082a35311da888b1f8a90220895fbc3e5929e16.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/debug_c082a35311da888b1f8a90220895fbc3e5929e16.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha2_140939e92addab635801f83a446d41db105558fb.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" afterPath="$PROJECT_DIR$/android/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-alpha2_51f45d5d3d057ad6b5f64fa186f90ea55b9f24ac.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" afterPath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Quaternions.java" afterPath="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Quaternions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/android.iml" afterPath="$PROJECT_DIR$/android/android.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build.gradle" afterPath="$PROJECT_DIR$/android/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_1_9_4_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_1_9_4_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_1_9_4_SNAPSHOT_sources.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_backend_android_1_9_4_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_android_1_9_4_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_backend_gwt_1_9_4_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_gwt_1_9_4_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_backend_gwt_1_9_4_SNAPSHOT_sources.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_gwt_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_backend_lwjgl_1_9_4_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_backend_lwjgl_1_9_4_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_1_9_4_SNAPSHOT_sources.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_1_9_4_SNAPSHOT_sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_desktop_1_9_4_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_desktop_1_9_4_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_gwt_1_9_4_SNAPSHOT_sources.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gdx_controllers_gwt_1_9_4_SNAPSHOT_sources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="libgdx-demo-invaders.iws" />
@@ -116,27 +140,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BLEDeviceScanActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BLEDeviceScanActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20981388">
-              <caret line="728" column="17" selection-start-line="728" selection-start-column="17" selection-end-line="728" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="498" column="17" selection-start-line="498" selection-start-column="17" selection-end-line="498" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initializeVariables#0;class#BLEDeviceScanActivity#0" expanded="false" />
-                <element signature="e#31604#32036#0" expanded="true" />
-                <element signature="e#32035#32036#0" expanded="true" />
+                <element signature="method#normalizedQ#0;class#BLEDeviceScanActivity#0" expanded="false" />
+                <element signature="method#parseJSONResponse#0;class#BLEDeviceScanActivity#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,17 +159,17 @@
         <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Quaternions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.16444983">
+              <caret line="122" column="53" selection-start-line="122" selection-start-column="53" selection-end-line="122" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -164,8 +178,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+            <state vertical-scroll-proportion="-3.96875">
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -176,12 +190,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="34" column="48" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#3944#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3007#3008#0" expanded="false" />
-                <element signature="e#3027#3028#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,12 +200,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="22" column="8" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#1776#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1016#1017#0" expanded="false" />
-                <element signature="e#1047#1048#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -206,12 +210,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="34" column="47" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#4181#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#2966#2967#0" expanded="false" />
-                <element signature="e#2986#2987#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2186,7 +2185,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\scott\Documents\libgdx-demo-invaders" value="10244623310891" />
+        <entry key="C:\Users\scott\Documents\libgdx-demo-invaders" value="10245796137860" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2526,8 +2525,8 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1/gdx-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/552d6354fb1cb545933c22c2a35ea675ac0be2a8/gdx-controllers-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/dc191f650ff04ce3ec43c9514bf63f5e11607f8f/gdx-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/1b2720a0d9d8569d9d7ccbed81ba6ade4a4ec9a2/gdx-controllers-1.9.4-SNAPSHOT.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/core" />
@@ -2640,12 +2639,12 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.4-SNAPSHOT/1f445f8ee90ad1a04baf6c2be80f39d747dbe3c6/gdx-backend-lwjgl-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-platform/1.9.4-SNAPSHOT/cb30f92c73669c2adc891d10bc70411ff183a18b/gdx-platform-1.9.4-SNAPSHOT-natives-desktop.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-desktop/1.9.4-SNAPSHOT/790bbbc56683d64d55988514e40ea9dc8e401823/gdx-controllers-desktop-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-platform/1.9.4-SNAPSHOT/5222bac4b9068220f927dc11d3969b773f9c75a2/gdx-controllers-platform-1.9.4-SNAPSHOT-natives-desktop.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1/gdx-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/552d6354fb1cb545933c22c2a35ea675ac0be2a8/gdx-controllers-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.4-SNAPSHOT/cdc1e3cd0ab894beae4c7bd488099b5e54d49b3c/gdx-backend-lwjgl-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-platform/1.9.4-SNAPSHOT/6881dfcf74b30673a816cf4bc0a0c50d75d93a1e/gdx-platform-1.9.4-SNAPSHOT-natives-desktop.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-desktop/1.9.4-SNAPSHOT/5afb074a164db3bc30869cf2236002949656d20f/gdx-controllers-desktop-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-platform/1.9.4-SNAPSHOT/8db9fc26d757d010718abbf21823562f83058798/gdx-controllers-platform-1.9.4-SNAPSHOT-natives-desktop.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/dc191f650ff04ce3ec43c9514bf63f5e11607f8f/gdx-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/1b2720a0d9d8569d9d7ccbed81ba6ade4a4ec9a2/gdx-controllers-1.9.4-SNAPSHOT.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl/2.9.2/a9d80fe5935c7a9149f6584d9777cfd471f65489/lwjgl-2.9.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl_util/2.9.2/4b9e37300a87799856e0bd15ed81663cdb6b0947/lwjgl_util-2.9.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.jlayer/jlayer/1.0.1-gdx/7cca83cec5c1b2f011362f4d85aabd71a73b049d/jlayer-1.0.1-gdx.jar" />
@@ -2770,14 +2769,14 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.9.4-SNAPSHOT/719ea1903639a2da6c2be4c58aad3889f83beb33/gdx-backend-gwt-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.9.4-SNAPSHOT/1acf47bd1a51697eb116f93695be32f8b84bf958/gdx-backend-gwt-1.9.4-SNAPSHOT-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/a31319deead92a876bd482099f12ddd8051a80aa/gdx-1.9.4-SNAPSHOT-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1/gdx-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/536f15847d3e2a3b8aa0c9660410f3bbdceb580a/gdx-controllers-1.9.4-SNAPSHOT-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/552d6354fb1cb545933c22c2a35ea675ac0be2a8/gdx-controllers-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/1eb2987030e39ac4dff33c5552efdff237c9c1bb/gdx-controllers-gwt-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/969e740ea74efc3bbcddf6a297b23b4fe853f362/gdx-controllers-gwt-1.9.4-SNAPSHOT-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.9.4-SNAPSHOT/a4404d242ce7d94e7a4eb4e7a1c04b11f0a4bc93/gdx-backend-gwt-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.9.4-SNAPSHOT/2d3af5165f15469d457feba43def927db74c5bd6/gdx-backend-gwt-1.9.4-SNAPSHOT-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6389e20e7d62ea8b27986e6554e08df6283f13f3/gdx-1.9.4-SNAPSHOT-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/dc191f650ff04ce3ec43c9514bf63f5e11607f8f/gdx-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/10859e174298597e1a945810f9ac877efde50037/gdx-controllers-1.9.4-SNAPSHOT-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers/1.9.4-SNAPSHOT/1b2720a0d9d8569d9d7ccbed81ba6ade4a4ec9a2/gdx-controllers-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/2a781a73c2b1a044ba89bd4e0a532dc4e3e53d5/gdx-controllers-gwt-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-gwt/1.9.4-SNAPSHOT/108c9032630a06335743bdc38affd729e262ef5f/gdx-controllers-gwt-1.9.4-SNAPSHOT-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-user/2.6.1/c078b1b8cc0281214b0eb458d2c283d039374fad/gwt-user-2.6.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.0.0.GA/b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e/validation-api-1.0.0.GA.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.0.0.GA/7a561191db2203550fbfa40d534d4997624cd369/validation-api-1.0.0.GA-sources.jar" />
@@ -2896,9 +2895,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-rt/1.12.0/17250fd5ced5ed79feb78dd3ec17ab51b26a4472/robovm-rt-1.12.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.12.0/3981e8b8dc5c446d3ac99533d9a0ea9b1514e84f/robovm-cocoatouch-1.12.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.9.4-SNAPSHOT/f506e8ad665d32ba1b783eee7b7d9a38ec30cf79/gdx-backend-robovm-1.9.4-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-platform/1.9.4-SNAPSHOT/55bc407c8363db8c83eb8e37310ec5635e17d61f/gdx-platform-1.9.4-SNAPSHOT-natives-ios.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1/gdx-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.9.4-SNAPSHOT/30f1915bd20247074333775019d379d89b5ef88c/gdx-backend-robovm-1.9.4-SNAPSHOT.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-platform/1.9.4-SNAPSHOT/f25add8aa94ad11d2ad0943cf02d638bbaae17a7/gdx-platform-1.9.4-SNAPSHOT-natives-ios.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/dc191f650ff04ce3ec43c9514bf63f5e11607f8f/gdx-1.9.4-SNAPSHOT.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-objc/1.12.0/d4547162299dcd29848c13a8adf71264c3929a1/robovm-objc-1.12.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobidevelop.robovm/robovm-cocoatouch/2.1.0/2850781f6d0854d87e01063e43d369c68d756a8c/robovm-cocoatouch-2.1.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobidevelop.robovm/robovm-objc/2.1.0/cd39a832684ad1848c917c1237313890237991d8/robovm-objc-2.1.0.jar" />
@@ -3048,12 +3047,12 @@
         <option value="$PROJECT_DIR$/core/src/com/badlogic/invaders/screens/GameLoop.java" />
         <option value="$PROJECT_DIR$/core/src/com/badlogic/invaders/simulation/Simulation.java" />
         <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/android/build.gradle" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/DynamoDB.java" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Book.java" />
-        <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" />
         <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Quaternions.java" />
+        <option value="$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/android/build.gradle" />
       </list>
     </option>
   </component>
@@ -3096,7 +3095,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3115,39 +3117,8 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libgdx-demo-invaders" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libgdx-demo-invaders" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3378,7 +3349,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3386,7 +3357,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837528" sideWeight="0.49713057" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3" sideWeight="0.60245466" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3" sideWeight="0.60245466" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3688,12 +3659,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="47" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#4181#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2966#2967#0" expanded="false" />
-            <element signature="e#2986#2987#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3701,12 +3667,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#1776#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1047#1048#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3714,12 +3675,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="48" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#3944#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#3007#3008#0" expanded="false" />
-            <element signature="e#3027#3028#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3773,14 +3729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/os/AsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3796,40 +3744,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/Quaternions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/src/com/badlogic/invaders/android/BLEDeviceScanActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20981388">
-          <caret line="728" column="17" selection-start-line="728" selection-start-column="17" selection-end-line="728" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="498" column="17" selection-start-line="498" selection-start-column="17" selection-end-line="498" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initializeVariables#0;class#BLEDeviceScanActivity#0" expanded="false" />
-            <element signature="e#31604#32036#0" expanded="true" />
-            <element signature="e#32035#32036#0" expanded="true" />
+            <element signature="method#normalizedQ#0;class#BLEDeviceScanActivity#0" expanded="false" />
+            <element signature="method#parseJSONResponse#0;class#BLEDeviceScanActivity#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.96875">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16444983">
+          <caret line="122" column="53" selection-start-line="122" selection-start-column="53" selection-end-line="122" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>

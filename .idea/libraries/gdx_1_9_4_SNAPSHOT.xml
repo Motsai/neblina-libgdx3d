@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="gdx-1.9.4-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6dd9909c7f3ac729630a6b56bc508c06f5a4b0e1/gdx-1.9.4-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/dc191f650ff04ce3ec43c9514bf63f5e11607f8f/gdx-1.9.4-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/a31319deead92a876bd482099f12ddd8051a80aa/gdx-1.9.4-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.4-SNAPSHOT/6389e20e7d62ea8b27986e6554e08df6283f13f3/gdx-1.9.4-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

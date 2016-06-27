@@ -118,7 +118,6 @@ public class BLEDeviceScanActivity extends ListActivity {
         ButterKnife.inject(this);
         activateBLE();
         initializeVariables();
-        new getAWSID().execute("gogogo!");
         scanLeDevice(true);
     }
 
@@ -445,8 +444,13 @@ public class BLEDeviceScanActivity extends ListActivity {
             q3_text.setText(Q2_string);
             q4_text.setText(Q3_string);
 
+            //TODO: Timestamp prints out as a compliment... so it appears to count down... I should fix this eventually
+            timestamp_N = (timestamp[3]&0xff)<<24 | (timestamp[2]&0xff)<<16 | (timestamp[1]&0xff)<<8 | (timestamp[0]&0xff)<<0;
+
+
             //TODO: Send Data To The Cloud
-            sendQuaternionsToCloud(Q0_string,Q1_string,Q2_string,Q3_string);
+//          sendQuaternionsToCloudRESTfully(Q0_string, Q1_string, Q2_string, Q3_string); //The pitcher works, the catcher fails
+            new getAWSID().execute("gogogo!"); //Uses the AWS Android SDK -> Seems to work
 
             //Periodically print out the timestamp
             if((periodic_print%100)==0) {
@@ -455,10 +459,7 @@ public class BLEDeviceScanActivity extends ListActivity {
                     Log.w("BLUETOOTH DEBUG", "Q1: " + latest_Q1);
                     Log.w("BLUETOOTH DEBUG", "Q2: " + latest_Q2);
                     Log.w("BLUETOOTH DEBUG", "Q3: " + latest_Q3);
-
-                    //TODO: Timestamp prints out as a compliment... so it appears to count down... I should fix this eventually
-                    timestamp_N = (timestamp[3]&0xff)<<24 | (timestamp[2]&0xff)<<16 | (timestamp[1]&0xff)<<8 | (timestamp[0]&0xff)<<0;
-                    Log.w("BLUETOOTH DEBUG", Long.toString(timestamp_N));
+                    Log.w("BLUETOOTH DEBUG", String.valueOf(timestamp_N));
                 }
             }
             sendBroadcast(intent);
@@ -532,7 +533,7 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onBLEButtonClick(View view){
             Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
 
-        sendQuaternionsToCloud("1", "1", "1", "1");
+        sendQuaternionsToCloudRESTfully("1", "1", "1", "1");
 
     }
 
@@ -603,7 +604,7 @@ public class BLEDeviceScanActivity extends ListActivity {
     }
 
     //************************************ HTTP NETWORKING CODE *****************************************************//
-    private void sendQuaternionsToCloud(String q0_string, String q1_string, String q2_string, String q3_string) {
+    private void sendQuaternionsToCloudRESTfully(String q0_string, String q1_string, String q2_string, String q3_string) {
         //Example GET URL - This worked!
 //        String databaseURL = "https://api.thingspeak.com/update?api_key=E3VK2KDK3IBGK8HT&field1=1";
 
@@ -748,8 +749,6 @@ public class BLEDeviceScanActivity extends ListActivity {
                         }
             });
 
-
-
             // Initialize the Cognito Sync client
         CognitoSyncManager syncClient = new CognitoSyncManager(
                 getApplicationContext(),
@@ -776,24 +775,14 @@ public class BLEDeviceScanActivity extends ListActivity {
 
             DynamoDBMapper mapper = new DynamoDBMapper(ddbClient);
 
-            //WRITE an object to DynamoDB
-//            Book book = new Book();
-//            book.setTitle("Eurika!");
-//            book.setAuthor("Archimedes");
-//            book.setPrice(800);
-//            book.setIsbn("1111111");
-//            book.setHardCover(false);
-//            mapper.save(book);
-
             Quaternions quaternions = new Quaternions();
-            quaternions.setQ1(0.01);
-            quaternions.setQ2(0.02);
-            quaternions.setQ3(0.03);
-            quaternions.setQ4(0.04);
-            quaternions.setTimestamp("00111");
+            quaternions.setQ1(latest_Q0);
+            quaternions.setQ2(latest_Q1);
+            quaternions.setQ3(latest_Q2);
+            quaternions.setQ4(latest_Q3);
+            quaternions.setTimestamp(Long.toString(timestamp_N));
 
             mapper.save(quaternions);
-
 
             runOnUiThread(new Runnable() {
                 @Override

@@ -120,6 +120,7 @@ idea {
 
 
 dependencies {
+    compile 'com.github.Motsai:neblina-android:master'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:+'
     compile 'com.jakewharton:butterknife:6.1.0'

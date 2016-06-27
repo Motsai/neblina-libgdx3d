@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="gdx-backend-lwjgl-1.9.4-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.4-SNAPSHOT/1f445f8ee90ad1a04baf6c2be80f39d747dbe3c6/gdx-backend-lwjgl-1.9.4-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.4-SNAPSHOT/cdc1e3cd0ab894beae4c7bd488099b5e54d49b3c/gdx-backend-lwjgl-1.9.4-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.4-SNAPSHOT/96e024f21a031e1d736f0d6bab107f4daa4c6ac/gdx-backend-lwjgl-1.9.4-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.9.4-SNAPSHOT/fadca09072199d53ef5ec9b5410a576c87cd58a3/gdx-backend-lwjgl-1.9.4-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

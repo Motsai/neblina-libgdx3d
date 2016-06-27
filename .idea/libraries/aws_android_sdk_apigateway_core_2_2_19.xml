@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="aws-android-sdk-apigateway-core-2.2.19">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-apigateway-core/2.2.19/bded89f19b0fda1f389da7157b35dd1cf37febc8/aws-android-sdk-apigateway-core-2.2.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

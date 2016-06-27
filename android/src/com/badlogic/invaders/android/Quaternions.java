@@ -41,7 +41,7 @@ public class Quaternions {
         this.q2 = q2;
     }
 
-    @DynamoDBAttribute(attributeName = "q31")
+    @DynamoDBAttribute(attributeName = "q3")
     public double getQ3() {
         return q3;
     }

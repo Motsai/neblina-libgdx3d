@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.9.4-SNAPSHOT/8679e211d1d5466c40043b07d237219940e22a65/gdx-backend-android-1.9.4-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.9.4-SNAPSHOT/4941c26a594c6aabaff4880c7125d72ff8793a29/gdx-backend-android-1.9.4-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

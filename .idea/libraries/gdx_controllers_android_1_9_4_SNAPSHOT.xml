@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-android/1.9.4-SNAPSHOT/8879a35987542249a19eac6ed8a8d93af84e563f/gdx-controllers-android-1.9.4-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-controllers-android/1.9.4-SNAPSHOT/222acdbdc234d8b163cc17b8b2aef6ba26cbd33e/gdx-controllers-android-1.9.4-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

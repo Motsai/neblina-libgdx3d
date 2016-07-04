@@ -1011,9 +1011,9 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     public void writeToParcel(Parcel out, int flags) {
         out.writeValue(Nebdev);
         out.writeLong(DevId);
-        out.writeValue(mBleGatt);
-        out.writeValue(mDelegate);
-        out.writeValue(mCtrlChar);
+//        out.writeValue(mBleGatt); //Seems to cause problems when pressing Start Game Button
+//        out.writeValue(mDelegate);
+//        out.writeValue(mCtrlChar);
 
     }
 

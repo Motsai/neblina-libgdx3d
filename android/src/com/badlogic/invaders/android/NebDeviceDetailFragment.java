@@ -176,16 +176,17 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
                     Q2_string = String.valueOf(latest_Q2);
                     Q3_string = String.valueOf(latest_Q3);
 
-//                    q1_text.setText(Q0_string);
-//                    q2_text.setText(Q1_string);
-//                    q3_text.setText(Q2_string);
-//                    q4_text.setText(Q3_string);
 
-                    
-                    q1_text.setText(Q0_string);
-                    q2_text.setText(Q1_string);
-                    q3_text.setText(Q2_string);
-                    q4_text.setText(Q3_string);
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            q1_text.setText(Q0_string);
+                            q2_text.setText(Q1_string);
+                            q3_text.setText(Q2_string);
+                            q4_text.setText(Q3_string);
+                        }
+                    });
+
 
                 break;
         }

@@ -13,6 +13,7 @@ import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 import java.util.List;
 import java.util.UUID;
@@ -179,6 +180,7 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
             gatt.discoverServices();
         }
         else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
+            Log.w("BLUETOOTH DEBUG", "DISCONNECTED... BYE BYE!");
         }
     }
 
@@ -186,13 +188,14 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
         if (status == BluetoothGatt.GATT_SUCCESS) {
             //Get the characteristic from the discovered gatt server
+            Log.w("BLUETOOTH DEBUG", "SERVICES DISCOVERED!");
             BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
             BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
             mCtrlChar = service.getCharacteristic(NEB_CTRLCHAR_UUID);
-            gatt.setCharacteristicNotification(data_characteristic, true);
-            List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
-            BluetoothGattDescriptor descriptor = descriptors.get(0);
-            descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+            gatt.setCharacteristicNotification(data_characteristic, true); //I used to do this in onCharactericticWrite???
+            List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors(); //I used to do this in onCharactericticWrite???
+            BluetoothGattDescriptor descriptor = descriptors.get(0);//I used to do this in onCharactericticWrite???
+            descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);//I used to do this in onCharactericticWrite???
             mBleGatt.writeDescriptor(descriptor);
             if (mDelegate != null)
                 mDelegate.didConnectNeblina();
@@ -202,9 +205,13 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     @Override
     public void onCharacteristicChanged (BluetoothGatt gatt,
                                          BluetoothGattCharacteristic characteristic) {
-        if (mDelegate == null)
+        if (mDelegate == null) {
+            Log.w("BLUETOOTH DEBUG", "Delegate is null");
             return;
+        }
 
+        //TODO: Handle incoming packets and broadcast them to the core script
+//        Log.w("BLUETOOTH DEBUG", "Receiving packets!");
         final byte[] pkt =  characteristic.getValue();
         int subsys = pkt[0] & 0x1f;
         final int pktype = pkt[0] >> 5;
@@ -718,6 +725,7 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
 
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
+
 
     public void streamQuaternion(boolean Enable)
     {

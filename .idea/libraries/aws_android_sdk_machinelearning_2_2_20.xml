@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="aws-android-sdk-machinelearning-2.2.20">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-machinelearning/2.2.20/f8ffe5617d36b1425f4019bedb94a8ba7677a007/aws-android-sdk-machinelearning-2.2.20.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-machinelearning/2.2.20/a24009712d11c65fdb6c7a66a24e8bb668bde582/aws-android-sdk-machinelearning-2.2.20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

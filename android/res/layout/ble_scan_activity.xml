@@ -25,9 +25,10 @@
         android:text="@string/emptyText"
         android:id="@android:id/empty"
         android:layout_alignTop="@android:id/list"
-        android:layout_alignStart="@+id/refreshButton"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="256dp"/>
+        android:layout_marginTop="256dp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tableLayout"
+        android:textAlignment="center"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,7 +47,7 @@
         android:id="@+id/refreshButton"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/GAME_BUTTON"
         android:layout_centerHorizontal="true"/>
 
     <TableLayout
@@ -55,7 +56,8 @@
         android:layout_below="@+id/textView"
         android:layout_toEndOf="@android:id/list"
         android:layout_above="@+id/refreshButton"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:id="@+id/tableLayout">
 
         <TableRow
             android:layout_width="match_parent"
@@ -439,5 +441,14 @@
         android:id="@+id/Available_BLE_Commands"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/textView"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game!"
+        android:id="@+id/GAME_BUTTON"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/refreshButton"
+        android:layout_alignStart="@+id/refreshButton"/>
 
 </RelativeLayout>

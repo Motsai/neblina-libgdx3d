@@ -3,13 +3,8 @@ package com.badlogic.invaders.android;
 import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothGatt;
-import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattDescriptor;
-import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
-import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -23,7 +18,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -43,36 +37,31 @@ import com.squareup.okhttp.Response;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class BLEDeviceScanActivity extends ListActivity {
 
-    public static float latest_Q0 = 0.0f;
-    public static float latest_Q1 = 0.0f;
-    public static float latest_Q2 = 0.0f;
-    public static float latest_Q3 = 0.0f;
-    public static String Q0_string = "";
-    public static String Q1_string = "";
-    public static String Q2_string = "";
-    public static String Q3_string = "";
-
-    public static long timestamp_N =0;
 
     private static final int REQUEST_ENABLE_BT = 0;
-    private BluetoothAdapter mBluetoothAdapter;
-    private Handler mHandler;
+//    private BluetoothAdapter mBluetoothAdapter;
+//    private Handler mHandler;
     private List<String> mDeviceNameList;
     private ArrayAdapter<String> mLeDeviceListAdapter;
     private static final long SCAN_PERIOD = 60000;
-    private List<BluetoothDevice> mDeviceList;
-    private BluetoothGatt mBluetoothGatt;
+    private final Map<String,Neblina> mDeviceList = new HashMap<String,Neblina>();
+    private Neblina activeDevice;
+    private NebDeviceDetailFragment activeDeviceDelegate;
+//    private BluetoothGatt mBluetoothGatt;
+    private boolean mBluetoothGatt;
     private boolean say_once = true;
     private int periodic_print = 0;
     public static boolean debug_mode1 = true;
@@ -98,17 +87,19 @@ public class BLEDeviceScanActivity extends ListActivity {
 
 
     //NEBLINA CUSTOM UUIDs
+    public static final UUID[] SCAN_UUID = {Neblina.NEB_SERVICE_UUID,};// UUID.fromString("0df9f021-1532-11e5-8960-0002a5d5c51b"), };
     public static final UUID NEB_SERVICE_UUID = UUID.fromString("0df9f021-1532-11e5-8960-0002a5d5c51b");
     public static final UUID NEB_DATACHAR_UUID = UUID.fromString("0df9f022-1532-11e5-8960-0002a5d5c51b");
     public static final UUID NEB_CTRLCHAR_UUID = UUID.fromString("0df9f023-1532-11e5-8960-0002a5d5c51b");
 
     public static final byte NEB_CTRL_PKTYPE_CMD = 2;
     public static final byte NEB_CTRL_SUBSYS_MOTION_ENG = 1;
+    private boolean mTwoPane;
+    private BluetoothAdapter mBluetoothAdapter;
+    private Handler mHandler;
+    private Context context;
 
-    @InjectView(R.id.Q1_TEXT) TextView q1_text;
-    @InjectView(R.id.Q2_TEXT) TextView q2_text;
-    @InjectView(R.id.Q3_TEXT) TextView q3_text;
-    @InjectView(R.id.Q4_TEXT) TextView q4_text;
+
 
 
     @Override
@@ -123,6 +114,7 @@ public class BLEDeviceScanActivity extends ListActivity {
 
     public void activateBLE() {
 
+        activeDeviceDelegate = new NebDeviceDetailFragment();
         //This should pass
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
@@ -144,7 +136,8 @@ public class BLEDeviceScanActivity extends ListActivity {
 
     private void initializeVariables() {
         mDeviceNameList = new ArrayList<String>();
-        mDeviceList = new ArrayList<BluetoothDevice>();
+//        mDeviceList = new ArrayList<BluetoothDevice>();
+//        mDeviceList = new ArrayList<String,Neblina>();
         mLeDeviceListAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, mDeviceNameList);
         setListAdapter(mLeDeviceListAdapter);
@@ -183,8 +176,8 @@ public class BLEDeviceScanActivity extends ListActivity {
             Log.w("BLUETOOTH_DEBUG", "onRestart!");
         }
         if(mConnectionState==STATE_CONNECTED) {
-            mBluetoothGatt.disconnect();
-            mBluetoothGatt.close();
+//            mBluetoothGatt.disconnect(); //pre-neblina class
+//            mBluetoothGatt.close();//pre-neblina class
         }
     }
 
@@ -192,18 +185,36 @@ public class BLEDeviceScanActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        BluetoothDevice device = mDeviceList.get(position);
+        activeDevice = mDeviceList.get(l.getItemAtPosition(position).toString());
+        mBluetoothGatt = activeDevice.Connect(getBaseContext());
 
-        //Note: Our app is the GATT client
-        mBluetoothGatt = device.connectGatt(getBaseContext(), false, mGattCallback);
+        Bundle arguments = new Bundle();
+        arguments.putParcelable(NebDeviceDetailFragment.ARG_ITEM_ID, activeDevice);
+        activeDeviceDelegate.SetItem(activeDevice);
+        activeDeviceDelegate.SetContext(this);
+        activeDeviceDelegate.setArguments(arguments);
+
+        //Perform Null Checks
+        if (this.getFragmentManager()==null){
+            Log.w("BLUETOOTH_DEBUG", "Fragment Manager is NULL!");
+        }else
+        if (this.getFragmentManager().beginTransaction()==null){
+            Log.w("BLUETOOTH_DEBUG", "Fragment Transaction is NULL!");
+        }else
+        if(activeDeviceDelegate==null){
+            Log.w("BLUETOOTH_DEBUG", "Fragment is NULL!");
+        }else {
+
+            //Checks pass so build the fragment
+            this.getFragmentManager().beginTransaction()
+                    .add(activeDeviceDelegate, "Fun")
+                    .commit();
+
+        }
 
         //Create Toast Message
-        String clicked_device = device.getName();
+        String clicked_device = activeDevice.toString();
         Toast.makeText(this, "Connecting to " + clicked_device, Toast.LENGTH_LONG).show();
-
-        Intent intent = new Intent(this,AndroidLauncher.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(intent);
     }
 
     private BluetoothAdapter.LeScanCallback mLeScanCallback =
@@ -214,16 +225,34 @@ public class BLEDeviceScanActivity extends ListActivity {
                         @Override
                         public void run() {
 
-                            final byte[] deviceID = Arrays.copyOfRange(scanRecord, 2, 10 + 1); //These are the deviceID bytes
-                            if (debug_mode1 == true) {
-                                Log.w("BLUETOOTH DEBUG", "You found something! Running LeScan Callback " + deviceID);
+                            //Using Hoan's Neblina Classes
+                            int i = 0;
+                            long deviceID = 0;
+
+                            // Try to find our device ID
+                            while (i < scanRecord.length && scanRecord[i] > 0) {
+                                if (scanRecord[i] > 0) {
+                                    if (scanRecord[i + 1] == -1) {
+                                        ByteBuffer x = ByteBuffer.wrap(scanRecord, i + 4, 8);
+                                        x.order(ByteOrder.LITTLE_ENDIAN);
+                                        deviceID = x.getLong();
+                                        break;
+                                    }
+                                    i += scanRecord[i] + 1;
+                                }
                             }
-                            if (device.getName() != null) {
-                                if (!mDeviceList.contains(device)) {
-                                    //TODO use the scanRecord bytes instead of the address
-                                    mLeDeviceListAdapter.add(device.getName().toString() + " " + device.getAddress());
+
+                            if(device.getName() != null){
+
+                                Neblina neblina = new Neblina(deviceID,device);
+                                if (mDeviceList.containsKey(neblina.toString()) == false) {
+                                    //Need to set the ID so that we can reference it when the list item is clicked
+//                                    mLeDeviceListAdapter.add(Long.toString(deviceID));
+                                    mLeDeviceListAdapter.add(neblina.toString());
                                     mLeDeviceListAdapter.notifyDataSetChanged();
-                                    mDeviceList.add(device);
+                                    mDeviceList.put(neblina.toString(), neblina);
+                                    Log.w("BLUETOOTH DEBUG", "Item added neblina.toString " + neblina.toString());
+                                    Log.w("BLUETOOTH DEBUG", "Item added Long.toString(deviceID) " + Long.toString(deviceID));
                                 }
                             }
                         }
@@ -233,157 +262,157 @@ public class BLEDeviceScanActivity extends ListActivity {
 
 
     //ALL THE CALLBACKS FOR ACTIVE BLE OPERATION
-    private final BluetoothGattCallback mGattCallback =
-            new BluetoothGattCallback() {
-
-                //CALLED WHEN CONNECTION STATE CHANGES
-                @Override
-                public void onConnectionStateChange(BluetoothGatt gatt, int status,
-                                                    int newState) {
-                    String intentAction;
-                    if (newState == BluetoothProfile.STATE_CONNECTED) {
-                        intentAction = ACTION_GATT_CONNECTED;
-                        mConnectionState = STATE_CONNECTED;
-                        broadcastUpdate(intentAction);
-                        boolean result= mBluetoothGatt.discoverServices();
-                        if(debug_mode1==true) {
-                            Log.w(TAG, "Connected to Gatt server and Starting discovery: " +
-                                    result);
-                        }
-
-                    } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
-                        intentAction = ACTION_GATT_DISCONNECTED;
-                        mConnectionState = STATE_DISCONNECTED;
-                        if(debug_mode1==true) {
-                            Log.i(TAG, "Disconnected from GATT server.");
-                        }
-                        broadcastUpdate(intentAction);
-                    }
-                }
-
-                //CALLED WHEN NEW SERVICES ARE DISCOVERED
-                @Override
-                public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-
-                    //Broadcast the discovery of BLE services
-                    if (status == BluetoothGatt.GATT_SUCCESS) {
-                        broadcastUpdate(ACTION_GATT_SERVICES_DISCOVERED);
-                    } else {
-                        if(debug_mode1==true) {
-                            Log.w(TAG, "onServicesDiscovered received: " + status);
-                        }
-                    }
-
-                    //Get the characteristic from the discovered gatt server
-                    BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
-                    BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
-                    BluetoothGattCharacteristic ctrl_characteristic = service.getCharacteristic(NEB_CTRLCHAR_UUID);
-
-                    //Here is the code that triggers a ONE TIME read of the characteristic
-//                    gatt.readCharacteristic(data_characteristic);
-//                    Log.w("BLUETOOTH_DEBUG", "Data Characteristic Read Enabled");
-
-                    //Create the packet ONCE to WRITE Quaternion streaming command
-                    byte[] writeData = new byte[20];
-                    for(int i=0; i <20;i++) {
-                        writeData[i] = 0;
-                    }
-                    writeData[0] = (NEB_CTRL_PKTYPE_CMD << 5) | NEB_CTRL_SUBSYS_MOTION_ENG;
-                    writeData[1] = 16; //TODO: Replace with sizeOf(dataPortion);
-                    writeData[2] = 0;
-                    writeData[3] = 4;
-                    boolean enable = true;
-                    if (enable == true)
-                    {
-                        writeData[8] = 1;
-                    }
-                    else
-                    {
-                        writeData[8] = 0;
-                    }
-
-                    //Display the string that was built
-                    Log.w("GATT TAG", writeData.toString());
-                    if (writeData != null && writeData.length > 0) {
-                        final StringBuilder stringBuilder = new StringBuilder(writeData.length);
-                        for (byte byteChar : writeData)
-                            stringBuilder.append(String.format("%02X ", byteChar));
-                        Log.w("GATT TAG", "Hex (length=" + writeData.length + "): " + stringBuilder.toString());
-                    }
-
-
-                    //Check to see if the set worked
-                    boolean didWriteCharacteristic = ctrl_characteristic.setValue(writeData);
-                    if(!didWriteCharacteristic){
-                        Log.w("GATT TAG","Characteristic DID NOT WRITE :~( ");
-                    }
-
-                    //Write the characteristic
-                    boolean didWriteGattCharacteristic = gatt.writeCharacteristic(ctrl_characteristic);
-                    //Check to see if the write worked
-                    if(!didWriteGattCharacteristic){
-                        Log.w("GATT TAG","GATTCharacteristic FAIL :O ");
-                    }
-                }
-
-                //CALLED WHEN CHARACTERISTICS ARE READ
-                @Override
-                public void onCharacteristicRead(BluetoothGatt gatt,
-                                                 BluetoothGattCharacteristic characteristic,
-                                                 int status) {
-                    if(debug_mode1==true) {
-                        Log.w("BLUETOOTH DEBUG", "You read characteristic value = " + characteristic.getValue());
-                    }
-                    if (status == BluetoothGatt.GATT_SUCCESS) {
-                        broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
-                    }
-                }
-
-
-                public void onCharacteristicWrite(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic, int status){
-
-                    if(debug_mode2==true) {
-                        Log.w("GATT WRITE", "GATT onCharacteristicWrite function was called. Status = " + status);
-                    }
-
-                    //Get the data_characteristic
-                    BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
-                    BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
-
-                    //Order periodic updates
-                    gatt.setCharacteristicNotification(data_characteristic, true);
-                    List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
-                    BluetoothGattDescriptor descriptor = descriptors.get(0);
-                    descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
-
-                    if (gatt.writeDescriptor(descriptor)){
-                        if(debug_mode1==true) {
-                            Log.w("BLUETOOTH_DEBUG", "Successfully wrote descriptor, you should now receive period updates");
-                        }
-
-                    }else {
-                        if(debug_mode1==true) {
-                            Log.w("BLUETOOTH_DEBUG", "Failed to write descriptor, periodic updates should FAIL :(");
-                        }
-                    }
-
-                }
-
-
-                //CALLED WHEN SUBSCRIBED AND A NEW CHARACTERISTIC ARRIVES
-                @Override
-            public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic){
-
-                    if(say_once==true){
-                        if(debug_mode1==true) {
-                            Log.w("BLUETOOTH DEBUG", "WOOHOO! You have started receiving periodic characteristics");
-                        }
-                        say_once=false;
-                    }
-
-                    broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
-                }
-            };
+//    private final BluetoothGattCallback mGattCallback =
+//            new BluetoothGattCallback() {
+//
+//                //CALLED WHEN CONNECTION STATE CHANGES
+//                @Override
+//                public void onConnectionStateChange(BluetoothGatt gatt, int status,
+//                                                    int newState) {
+//                    String intentAction;
+//                    if (newState == BluetoothProfile.STATE_CONNECTED) {
+//                        intentAction = ACTION_GATT_CONNECTED;
+//                        mConnectionState = STATE_CONNECTED;
+//                        broadcastUpdate(intentAction);
+//                        boolean result= mBluetoothGatt.discoverServices();
+//                        if(debug_mode1==true) {
+//                            Log.w(TAG, "Connected to Gatt server and Starting discovery: " +
+//                                    result);
+//                        }
+//
+//                    } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
+//                        intentAction = ACTION_GATT_DISCONNECTED;
+//                        mConnectionState = STATE_DISCONNECTED;
+//                        if(debug_mode1==true) {
+//                            Log.i(TAG, "Disconnected from GATT server.");
+//                        }
+//                        broadcastUpdate(intentAction);
+//                    }
+//                }
+//
+//                //CALLED WHEN NEW SERVICES ARE DISCOVERED
+//                @Override
+//                public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+//
+//                    //Broadcast the discovery of BLE services
+//                    if (status == BluetoothGatt.GATT_SUCCESS) {
+//                        broadcastUpdate(ACTION_GATT_SERVICES_DISCOVERED);
+//                    } else {
+//                        if(debug_mode1==true) {
+//                            Log.w(TAG, "onServicesDiscovered received: " + status);
+//                        }
+//                    }
+//
+//                    //Get the characteristic from the discovered gatt server
+//                    BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
+//                    BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
+//                    BluetoothGattCharacteristic ctrl_characteristic = service.getCharacteristic(NEB_CTRLCHAR_UUID);
+//
+//                    //Here is the code that triggers a ONE TIME read of the characteristic
+////                    gatt.readCharacteristic(data_characteristic);
+////                    Log.w("BLUETOOTH_DEBUG", "Data Characteristic Read Enabled");
+//
+//                    //Create the packet ONCE to WRITE Quaternion streaming command
+//                    byte[] writeData = new byte[20];
+//                    for(int i=0; i <20;i++) {
+//                        writeData[i] = 0;
+//                    }
+//                    writeData[0] = (NEB_CTRL_PKTYPE_CMD << 5) | NEB_CTRL_SUBSYS_MOTION_ENG;
+//                    writeData[1] = 16; //TODO: Replace with sizeOf(dataPortion);
+//                    writeData[2] = 0;
+//                    writeData[3] = 4;
+//                    boolean enable = true;
+//                    if (enable == true)
+//                    {
+//                        writeData[8] = 1;
+//                    }
+//                    else
+//                    {
+//                        writeData[8] = 0;
+//                    }
+//
+//                    //Display the string that was built
+//                    Log.w("GATT TAG", writeData.toString());
+//                    if (writeData != null && writeData.length > 0) {
+//                        final StringBuilder stringBuilder = new StringBuilder(writeData.length);
+//                        for (byte byteChar : writeData)
+//                            stringBuilder.append(String.format("%02X ", byteChar));
+//                        Log.w("GATT TAG", "Hex (length=" + writeData.length + "): " + stringBuilder.toString());
+//                    }
+//
+//
+//                    //Check to see if the set worked
+//                    boolean didWriteCharacteristic = ctrl_characteristic.setValue(writeData);
+//                    if(!didWriteCharacteristic){
+//                        Log.w("GATT TAG","Characteristic DID NOT WRITE :~( ");
+//                    }
+//
+//                    //Write the characteristic
+//                    boolean didWriteGattCharacteristic = gatt.writeCharacteristic(ctrl_characteristic);
+//                    //Check to see if the write worked
+//                    if(!didWriteGattCharacteristic){
+//                        Log.w("GATT TAG","GATTCharacteristic FAIL :O ");
+//                    }
+//                }
+//
+//                //CALLED WHEN CHARACTERISTICS ARE READ
+//                @Override
+//                public void onCharacteristicRead(BluetoothGatt gatt,
+//                                                 BluetoothGattCharacteristic characteristic,
+//                                                 int status) {
+//                    if(debug_mode1==true) {
+//                        Log.w("BLUETOOTH DEBUG", "You read characteristic value = " + characteristic.getValue());
+//                    }
+//                    if (status == BluetoothGatt.GATT_SUCCESS) {
+//                        broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+//                    }
+//                }
+//
+//
+//                public void onCharacteristicWrite(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic, int status){
+//
+//                    if(debug_mode2==true) {
+//                        Log.w("GATT WRITE", "GATT onCharacteristicWrite function was called. Status = " + status);
+//                    }
+//
+//                    //Get the data_characteristic
+//                    BluetoothGattService service = gatt.getService(NEB_SERVICE_UUID);
+//                    BluetoothGattCharacteristic data_characteristic = service.getCharacteristic(NEB_DATACHAR_UUID);
+//
+//                    //Order periodic updates
+//                    gatt.setCharacteristicNotification(data_characteristic, true);
+//                    List<BluetoothGattDescriptor> descriptors = data_characteristic.getDescriptors();
+//                    BluetoothGattDescriptor descriptor = descriptors.get(0);
+//                    descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+//
+//                    if (gatt.writeDescriptor(descriptor)){
+//                        if(debug_mode1==true) {
+//                            Log.w("BLUETOOTH_DEBUG", "Successfully wrote descriptor, you should now receive period updates");
+//                        }
+//
+//                    }else {
+//                        if(debug_mode1==true) {
+//                            Log.w("BLUETOOTH_DEBUG", "Failed to write descriptor, periodic updates should FAIL :(");
+//                        }
+//                    }
+//
+//                }
+//
+//
+//                //CALLED WHEN SUBSCRIBED AND A NEW CHARACTERISTIC ARRIVES
+//                @Override
+//            public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic){
+//
+//                    if(say_once==true){
+//                        if(debug_mode1==true) {
+//                            Log.w("BLUETOOTH DEBUG", "WOOHOO! You have started receiving periodic characteristics");
+//                        }
+//                        say_once=false;
+//                    }
+//
+//                    broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+//                }
+//            };
 
     //BROADCAST WITHOUT CHARACTERISTIC
     private void broadcastUpdate(final String action) {
@@ -398,83 +427,26 @@ public class BLEDeviceScanActivity extends ListActivity {
     private void broadcastUpdate(final String action,
                                  final BluetoothGattCharacteristic characteristic) {
         final Intent intent = new Intent(action);
-        if(debug_mode1==true) {
             Log.w("BLUETOOTH DEBUG", "You are in LONG form of onBroadcastUpdate");
-        }
-
 
         //TODO: Unwrapping utilities should be moved to the broadcast receiver functions
         final byte[] data = characteristic.getValue();
 
-        //Puts the characteristic values into the intent
-        if (data != null && data.length > 0) {
-            final StringBuilder stringBuilder = new StringBuilder(data.length);
-            for (byte byteChar : data)
-                stringBuilder.append(String.format("%02X ", byteChar));
-//            Log.w("BLUETOOTH DEBUG", "Hex (length=" + data.length + "): " + stringBuilder.toString());
-            intent.putExtra(EXTRA_DATA, new String(data) + "\n" +
-                    stringBuilder.toString());
-        }
 
-        //Unwrap Data Based on Motsai's Neblina Protocol
-        if (data.length == 20) {
-            //Plus 1 is to remind me that the end of the range is non-inclusive
-            final byte[] header = Arrays.copyOfRange(data, 0, 3 + 1); //Bytes 0-3 are the header
-            final byte[] timestamp = Arrays.copyOfRange(data, 4, 7 + 1); //Bytes 4-7 are the timestamp
-            final byte[] q0 = Arrays.copyOfRange(data, 8, 9 + 1); // Bytes 8-9 are Q0 value
-            final byte[] q1 = Arrays.copyOfRange(data, 10, 11 + 1); // Bytes 10-11 are Q1 value
-            final byte[] q2 = Arrays.copyOfRange(data, 12, 13 + 1); // Bytes 12-13 are Q2 value
-            final byte[] q3 = Arrays.copyOfRange(data, 14, 15 + 1); // Bytes 14-15 are Q3 value
-            final byte[] reserved = Arrays.copyOfRange(data, 16, 19 + 1); // Bytes 16-19 are reserved
-
-            //Convert to big endian
-            latest_Q0 = normalizedQ(q0);
-            latest_Q1 = normalizedQ(q1);
-            latest_Q2 = normalizedQ(q2);
-            latest_Q3 = normalizedQ(q3);
-
-            //Create a string version
-            Q0_string = String.valueOf(latest_Q0);
-            Q1_string = String.valueOf(latest_Q1);
-            Q2_string = String.valueOf(latest_Q2);
-            Q3_string = String.valueOf(latest_Q3);
-
-            q1_text.setText(Q0_string);
-            q2_text.setText(Q1_string);
-            q3_text.setText(Q2_string);
-            q4_text.setText(Q3_string);
-
-            //TODO: Timestamp prints out as a compliment... so it appears to count down... I should fix this eventually
-            timestamp_N = (timestamp[3]&0xff)<<24 | (timestamp[2]&0xff)<<16 | (timestamp[1]&0xff)<<8 | (timestamp[0]&0xff)<<0;
+//            //TODO: Timestamp prints out as a compliment... so it appears to count down... I should fix this eventually
+//            timestamp_N = (timestamp[3]&0xff)<<24 | (timestamp[2]&0xff)<<16 | (timestamp[1]&0xff)<<8 | (timestamp[0]&0xff)<<0;
 
 
             //TODO: Send Data To The Cloud
 //          sendQuaternionsToCloudRESTfully(Q0_string, Q1_string, Q2_string, Q3_string); //The pitcher works, the catcher fails
-            new getAWSID().execute("gogogo!"); //Uses the AWS Android SDK -> Seems to work
+//            new getAWSID().execute("gogogo!"); //Uses the AWS Android SDK -> Seems to work
 
-            //Periodically print out the timestamp
-            if((periodic_print%100)==0) {
-                if(debug_mode1==true) {
-                    Log.w("BLUETOOTH DEBUG", "Q0: " + latest_Q0);
-                    Log.w("BLUETOOTH DEBUG", "Q1: " + latest_Q1);
-                    Log.w("BLUETOOTH DEBUG", "Q2: " + latest_Q2);
-                    Log.w("BLUETOOTH DEBUG", "Q3: " + latest_Q3);
-                    Log.w("BLUETOOTH DEBUG", String.valueOf(timestamp_N));
-                }
-            }
             sendBroadcast(intent);
         }
-    }
 
 
-    private float normalizedQ(byte[] q) {
-        if(q.length==2){
-            int val = ((q[1]&0xff)<<8)|(q[0]&0xff); //concatenate the byte array into an int
-            float normalized = (float) val / 32768; //normalize by dividing by 2^15
-            if (normalized > 1.0) normalized = normalized-2;
-            return normalized;
-        }else return -1;
-    }
+
+
 
 
     private final BroadcastReceiver mGattUpdateReceiver = new BroadcastReceiver() {
@@ -529,6 +501,7 @@ public class BLEDeviceScanActivity extends ListActivity {
         scanLeDevice(true);
     }
 
+    //TODO: Write the handlers for all of these buttons
     @OnClick(R.id.BLE_BUTTON)
     public void onBLEButtonClick(View view){
             Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
@@ -544,9 +517,9 @@ public class BLEDeviceScanActivity extends ListActivity {
     }
 
     @OnClick(R.id.QUATERNION_BUTTON)
-    public void onQuaternionButtonClick(View view){
+    public void onQuaternionButtonClick(View view) {
         Log.w("BLUETOOTH_DEBUG", "QUATERNION BUTTON PRESSED!");
-
+        activeDevice.streamQuaternion(true);
     }
 
     @OnClick(R.id.MAG_BUTTON)
@@ -600,6 +573,15 @@ public class BLEDeviceScanActivity extends ListActivity {
     @OnClick(R.id.CHARGE_INPUT)
     public void onCHARGEButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "CHARGE BUTTON PRESSED!");
+
+    }
+
+    @OnClick(R.id.GAME_BUTTON)
+    public void onGAMEButtonClick(View view){
+        Log.w("BLUETOOTH_DEBUG", "GAME BUTTON PRESSED!");
+        Intent intent = new Intent(this,AndroidLauncher.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
 
     }
 
@@ -776,11 +758,11 @@ public class BLEDeviceScanActivity extends ListActivity {
             DynamoDBMapper mapper = new DynamoDBMapper(ddbClient);
 
             Quaternions quaternions = new Quaternions();
-            quaternions.setQ1(latest_Q0);
-            quaternions.setQ2(latest_Q1);
-            quaternions.setQ3(latest_Q2);
-            quaternions.setQ4(latest_Q3);
-            quaternions.setTimestamp(Long.toString(timestamp_N));
+            quaternions.setQ1(NebDeviceDetailFragment.latest_Q0);
+            quaternions.setQ2(NebDeviceDetailFragment.latest_Q1);
+            quaternions.setQ3(NebDeviceDetailFragment.latest_Q2);
+            quaternions.setQ4(NebDeviceDetailFragment.latest_Q3);
+            quaternions.setTimestamp(Long.toString(NebDeviceDetailFragment.timestamp_N));
 
             mapper.save(quaternions);
 

@@ -17,7 +17,9 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -191,7 +193,6 @@ public class BLEDeviceScanActivity extends ListActivity {
         Bundle arguments = new Bundle();
         arguments.putParcelable(NebDeviceDetailFragment.ARG_ITEM_ID, activeDevice);
         activeDeviceDelegate.SetItem(activeDevice);
-        activeDeviceDelegate.SetContext(this);
         activeDeviceDelegate.setArguments(arguments);
 
         //Perform Null Checks
@@ -501,30 +502,50 @@ public class BLEDeviceScanActivity extends ListActivity {
         scanLeDevice(true);
     }
 
-    //TODO: Write the handlers for all of these buttons
+
     @OnClick(R.id.BLE_BUTTON)
     public void onBLEButtonClick(View view){
             Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
 
-        sendQuaternionsToCloudRESTfully("1", "1", "1", "1");
+        if(activeDevice!=null){
+            activeDevice.setDataPort(0, (byte) 1);
+        }
+        else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
 
+//        sendQuaternionsToCloudRESTfully("1", "1", "1", "1");
     }
 
     @OnClick(R.id.UART_BUTTON)
     public void onUARTButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "UART BUTTON PRESSED!");
-
+        if(activeDevice!=null){
+            activeDevice.setDataPort(1, (byte) 1);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
     }
 
     @OnClick(R.id.QUATERNION_BUTTON)
     public void onQuaternionButtonClick(View view) {
         Log.w("BLUETOOTH_DEBUG", "QUATERNION BUTTON PRESSED!");
-        activeDevice.streamQuaternion(true);
+        if(activeDevice!=null){
+            activeDevice.streamQuaternion(true);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
     }
 
     @OnClick(R.id.MAG_BUTTON)
     public void onMAGButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "MAG BUTTON PRESSED!");
+
+        if(activeDevice!=null){
+            activeDevice.streamMAG(true);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
 
     }
 
@@ -532,17 +553,35 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onLOCKButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "LOCK BUTTON PRESSED!");
 
+        if(activeDevice!=null){
+            activeDevice.setLockHeadingReference(true);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
+
+
     }
 
     @OnClick(R.id.ERASE_BUTTON)
     public void onERASEButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "ERASE BUTTON PRESSED!");
 
+        if(activeDevice!=null){
+            activeDevice.eraseStorage(true);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
     }
 
     @OnClick(R.id.RECORD_BUTTON)
     public void onRECORDButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "RECORD BUTTON PRESSED!");
+
+        if(activeDevice!=null){
+            activeDevice.sessionRecord(true);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
 
     }
 
@@ -550,30 +589,71 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onPLAYBACKButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "PLAYBACK BUTTON PRESSED!");
 
+        if(activeDevice!=null){
+            activeDevice.sessionPlayback(true,0001); //TODO: What should be the sessionID here???
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
+
     }
 
     @OnClick(R.id.LED0_BUTTON)
     public void onLED0ButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "LED0 BUTTON PRESSED!");
-
+        if(activeDevice!=null){
+            activeDevice.setLed((byte) 0, (byte) 1);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
     }
 
     @OnClick(R.id.LED1_BUTTON)
     public void onLED1ButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "LED1 BUTTON PRESSED!");
-
+        if(activeDevice!=null){
+            activeDevice.setLed((byte) 1, (byte) 1);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
     }
 
     @OnClick(R.id.EEPROM_BUTTON)
     public void onEEPROMButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "EEPROM BUTTON PRESSED!");
-
+        if(activeDevice!=null){
+            activeDevice.eepromRead(1);
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
     }
 
     @OnClick(R.id.CHARGE_INPUT)
     public void onCHARGEButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "CHARGE BUTTON PRESSED!");
+        TextView mEdit = (EditText)findViewById(R.id.CHARGE_INPUT);
+        String value = mEdit.getText().toString();
 
+        if(activeDevice!=null){
+            if(isInteger(value, 10)){
+            activeDevice.setBatteryChargeCurrent(Integer.parseInt(value));
+            }else{
+                Toast.makeText(this, "Please enter an integer value", Toast.LENGTH_LONG).show();
+            }
+        }else{
+            Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
+        }
+    }
+
+    public static boolean isInteger(String s, int radix) {
+        if(s.isEmpty()) return false;
+        for(int i = 0; i < s.length(); i++) {
+            if(i == 0 && s.charAt(i) == '-') {
+                if(s.length() == 1) return false;
+                else continue;
+            }
+            if(Character.digit(s.charAt(i),radix) < 0) return false;
+        }
+        return true;
     }
 
     @OnClick(R.id.GAME_BUTTON)
@@ -582,7 +662,6 @@ public class BLEDeviceScanActivity extends ListActivity {
         Intent intent = new Intent(this,AndroidLauncher.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
-
     }
 
     //************************************ HTTP NETWORKING CODE *****************************************************//

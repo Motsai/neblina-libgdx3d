@@ -4,9 +4,7 @@ package com.badlogic.invaders.android;
  * Created by scott on 2016-06-30.
  */
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -43,13 +41,6 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
     public static String Q3_string = "";
     public static long timestamp_N =0;
 
-//    @InjectView(R.id.Q1_TEXT) TextView q1_text;
-//    @InjectView(R.id.Q2_TEXT) TextView q2_text;
-//    @InjectView(R.id.Q3_TEXT) TextView q3_text;
-//    @InjectView(R.id.Q4_TEXT) TextView q4_text;
-
-    private Context mContext;
-
     public static TextView q1_text;
     public static TextView q2_text;
     public static TextView q3_text;
@@ -64,9 +55,6 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
         mItem.SetDelegate(this);
     }
 
-    public void SetContext(Context context){
-        mContext = context;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -99,37 +87,15 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
 
 //        View rootView = container.getRootView();//Nope
 
-        View rootView = inflater.inflate(R.layout.ble_scan_activity, container, true);//Works, but doesn't change UI
+        View rootView = inflater.inflate(R.layout.ble_scan_activity, container, true);//Not sure why we need root view
 
         q1_text = (TextView)getActivity().findViewById(R.id.Q1_TEXT);
         q2_text = (TextView)getActivity().findViewById(R.id.Q2_TEXT);
         q3_text = (TextView)getActivity().findViewById(R.id.Q3_TEXT);
         q4_text = (TextView)getActivity().findViewById(R.id.Q4_TEXT);
 
-
-//        q1_text = (TextView)rootView.findViewById(R.id.Q1_TEXT);
-//        q2_text = (TextView)rootView.findViewById(R.id.Q2_TEXT);
-//        q3_text = (TextView)rootView.findViewById(R.id.Q3_TEXT);
-//        q4_text = (TextView)rootView.findViewById(R.id.Q4_TEXT);
-
-
-        q1_text.setText("Hello!");
-        Log.w("BLUETOOTH DEBUG", "q1_text is set to:"+q1_text.getText());
-
-
-        // Show the dummy content as text in a TextView.
-        if (mItem != null) {
-            Log.w("BLUETOOTH DEBUG", "mItem isn't null");
-//             ((TextView) rootView.findViewById(R.id.Q1_TEXT)).setText("PLEASE!");
-        }
-
+        q1_text.setText("Hello Earthling!");
         return rootView;
-    }
-
-    @Override
-    public void onAttach(Activity activity){
-        super.onAttach(activity);
-        Log.w("BLUETOOTH DEBUG", "onAttach called!");
     }
 
     // MARK : NeblinaDelegate
@@ -186,7 +152,6 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
                             q4_text.setText(Q3_string);
                         }
                     });
-
 
                 break;
         }

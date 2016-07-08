@@ -6,7 +6,6 @@ package com.badlogic.invaders.android;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,22 +14,14 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate {
-    /**
-     * The fragment argument representing the item ID that this fragment
-     * represents.
-     */
+
+     //The fragment argument representing the item ID that this fragment represents.
     public static final String ARG_ITEM_ID = "item_id";
 
-    /**
-     * The dummy content this fragment is presenting.
-     */
+    //The dummy content this fragment is presenting.
     private Neblina mItem;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
-
+    //Mandatory empty constructor for the fragment manager to instantiate the fragment (e.g. upon screen orientation changes)
     public static float latest_Q0 = 0.0f;
     public static float latest_Q1 = 0.0f;
     public static float latest_Q2 = 0.0f;
@@ -55,40 +46,23 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
         mItem.SetDelegate(this);
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(getActivity()==null){
-            Log.w("BLUETOOTH DEBUG", "Get Activity is Null");
-        }
-//        ButterKnife.inject(getActivity());
-
-        Log.w("BLUETOOTH DEBUG", "View Created");
-
-
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
-            // mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
             mItem = (Neblina) getArguments().getParcelable(ARG_ITEM_ID);
-
             mItem.SetDelegate(this);
-            // mItem.Connect(null);
-
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.w("BLUETOOTH DEBUG", "onCreateView called!");
-
-//        View rootView = container.getRootView();//Nope
 
         View rootView = inflater.inflate(R.layout.ble_scan_activity, container, true);//Not sure why we need root view
-
         q1_text = (TextView)getActivity().findViewById(R.id.Q1_TEXT);
         q2_text = (TextView)getActivity().findViewById(R.id.Q2_TEXT);
         q3_text = (TextView)getActivity().findViewById(R.id.Q3_TEXT);
@@ -98,18 +72,15 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
         return rootView;
     }
 
-    // MARK : NeblinaDelegate
+
     public void didConnectNeblina() {
         mItem.streamQuaternion(true);
     }
-    public void didReceiveRSSI(int rssi) {
+    public void didReceiveRSSI(int rssi) {}
 
-    }
     public void didReceiveFusionData(int type , byte[] data, boolean errFlag) {
         switch (type) {
             case Neblina.MOTION_CMD_QUATERNION:
-                //TODO: Bind Quaternion data to core here!
-//                Log.w("BLUETOOTH DEBUG", "Data length " + data.length);
 
                 //Puts the characteristic values into the intent
                 if (data != null && data.length > 0) {
@@ -117,6 +88,12 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
                     for (byte byteChar : data)
                         stringBuilder.append(String.format("%02X ", byteChar));
                 }
+
+                //TODO: Fix timestamping
+//            timestamp_N = (timestamp[3]&0xff)<<24 | (timestamp[2]&0xff)<<16 | (timestamp[1]&0xff)<<8 | (timestamp[0]&0xff)<<0;
+                //TODO: Fix and Test Sending Data To The Cloud
+//          sendQuaternionsToCloudRESTfully(Q0_string, Q1_string, Q2_string, Q3_string); //The pitcher works, the catcher fails
+//            new getAWSID().execute("gogogo!"); //Uses the AWS Android SDK -> Seems to work
 
                 //Unwrap Data Based on Motsai's Neblina Protocol
                 if (data.length == 16) {
@@ -141,7 +118,6 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
                     Q1_string = String.valueOf(latest_Q1);
                     Q2_string = String.valueOf(latest_Q2);
                     Q3_string = String.valueOf(latest_Q3);
-
 
                     getActivity().runOnUiThread(new Runnable() {
                         @Override

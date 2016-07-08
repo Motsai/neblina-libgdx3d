@@ -4,12 +4,12 @@
         "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0-alpha2\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_checkbox_checked_mtrl.png",
-        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\abc_btn_checkbox_checked_mtrl.png"
-    },
-    {
         "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_overflow_material.png",
         "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\abc_ic_menu_overflow_material.png"
+    },
+    {
+        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_checkbox_checked_mtrl.png",
+        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\abc_btn_checkbox_checked_mtrl.png"
     },
     {
         "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png",

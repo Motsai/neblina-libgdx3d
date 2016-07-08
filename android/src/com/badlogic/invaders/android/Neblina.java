@@ -154,16 +154,11 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     public boolean isDeviceReady() {
         if (Nebdev == null)
             return false;
-
-        // if (Nebdev.getBondState() == BluetoothDevice.BOND_BONDED)
         return true;
-
-        //return false;
     }
 
     public boolean Connect(Context ctext) {
         mBleGatt = Nebdev.connectGatt(ctext, false, this);
-
         return mBleGatt != null;
     }
 
@@ -1029,9 +1024,9 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     public void writeToParcel(Parcel out, int flags) {
         out.writeValue(Nebdev);
         out.writeLong(DevId); //TODO: Do we really need these parcel writes???
-//        out.writeValue(mBleGatt); //Seems to cause problems when pressing Start Game Button
-//        out.writeValue(mDelegate);
-//        out.writeValue(mCtrlChar);
+        out.writeValue(mBleGatt); //Seems to cause problems when pressing Start Game Button
+        out.writeValue(mDelegate);
+        out.writeValue(mCtrlChar);
 
     }
 

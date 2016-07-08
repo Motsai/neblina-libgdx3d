@@ -216,11 +216,11 @@
         "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0-alpha2\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0-alpha2\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ble_scan_activity.xml",
         "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\res\\layout\\ble_scan_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\scott\\Documents\\libgdx-demo-invaders\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0-alpha2\\res\\layout\\notification_template_media.xml"
     }
 ]

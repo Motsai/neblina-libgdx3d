@@ -17,7 +17,7 @@ public interface NeblinaDelegate {
     public final static String ACTION_NEB_EEPROM_DATA = "com.motsai.neblina.ACTION_NEB_EEPROM_DATA";
 
 
-    void didConnectNeblina();
+    void initializeNeblina();
     void didReceiveRSSI(int rssi);
     void didReceiveFusionData(int type , byte[] data, boolean errFlag);
     void didReceiveDebugData(int type, byte[] data, boolean errFlag);

@@ -100,8 +100,8 @@
     <orderEntry type="library" exported="" name="recyclerview-v7-24.0.0-alpha2" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-cognito-2.2.20" level="project" />
     <orderEntry type="library" exported="" name="support-vector-drawable-24.0.0-alpha2" level="project" />
-    <orderEntry type="library" exported="" name="aws-android-sdk-core-2.2.20" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-machinelearning-2.2.20" level="project" />
+    <orderEntry type="library" exported="" name="aws-android-sdk-core-2.2.20" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-24.0.0-alpha2" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-s3-2.2.20" level="project" />
     <orderEntry type="module" module-name="core" exported="" />

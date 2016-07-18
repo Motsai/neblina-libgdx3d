@@ -126,6 +126,7 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     BluetoothGatt mBleGatt;
     NeblinaDelegate mDelegate;
     BluetoothGattCharacteristic mCtrlChar;
+    boolean first_connect = true;
 
     public void SetDelegate(NeblinaDelegate neblinaDelegate) {
         mDelegate = neblinaDelegate;
@@ -192,8 +193,12 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
             BluetoothGattDescriptor descriptor = descriptors.get(0);//I used to do this in onCharactericticWrite???
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);//I used to do this in onCharactericticWrite???
             mBleGatt.writeDescriptor(descriptor);
-            if (mDelegate != null)
-                mDelegate.didConnectNeblina();
+
+
+            if (mDelegate != null && first_connect==true) {
+                mDelegate.initializeNeblina();
+                first_connect = false;
+            }
         }
     }
 
@@ -205,8 +210,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
             return;
         }
 
-        //TODO: Handle incoming packets and broadcast them to the core script
-//        Log.w("BLUETOOTH DEBUG", "Receiving packets!");
         final byte[] pkt =  characteristic.getValue();
         int subsys = pkt[0] & 0x1f;
         final int pktype = pkt[0] >> 5;
@@ -338,7 +341,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 6), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:Control Interface
     public void setInterface(byte Interf) {
         if (isDeviceReady() == false) {
             return;
@@ -447,7 +449,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     // *** Power management sybsystem commands
     public void getTemperature() {
         if (isDeviceReady() == false) {
@@ -488,7 +489,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 6), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     // *** Motion Settings
     public void setAccelerometerRange(byte Mode) {
         if (isDeviceReady() == false) {
@@ -508,7 +508,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
 //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     public void setFusionType(byte Mode) {
         if (isDeviceReady() == false) {
             return;
@@ -546,7 +545,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     // *** Motion Streaming Send
     public void streamDisableAll()
     {
@@ -566,7 +564,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
 //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     public void streamEulerAngle(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -594,7 +591,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
 //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     public void streamExternalForce(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -622,7 +618,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     public void streamIMU(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -677,7 +672,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: What to do here?
     public void streamMotionState(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -705,7 +699,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO: ???
     public void streamPedometer(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -736,7 +729,9 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
 
     public void streamQuaternion(boolean Enable)
     {
+        Log.w("BLUETOOTH_DEBUG", "streamingQuaternions!" + Enable );
         if (isDeviceReady() == false) {
+            Log.w("BLUETOOTH_DEBUG", "Device is not ready!" + Enable );
             return;
         }
 
@@ -760,7 +755,7 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
 
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
-//TODO: ???
+
     public void streamRotationInfo(boolean Enable) {
         if (isDeviceReady() == false) {
             return;
@@ -787,7 +782,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:???
     public void  streamSittingStanding(boolean Enable) {
         if (isDeviceReady() == false) {
             return;
@@ -814,7 +808,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:???
     public void streamTrajectoryInfo(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -842,7 +835,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:???
     // *** Motion utilities
     public void resetTimeStamp() {
         if (isDeviceReady() == false) {
@@ -862,7 +854,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:???
     public void recordTrajectory(boolean Enable)
     {
         if (isDeviceReady() == false) {
@@ -890,7 +881,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:???
     // *** Storage subsystem commands
     public void getSessionCount() {
         if (isDeviceReady() == false) {
@@ -910,7 +900,6 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
         //device.writeValue(NSData(bytes: UnsafeMutablePointer<Void>(pkbuf), length: 20), forCharacteristic: ctrlChar, type: CBCharacteristicWriteType.WithoutResponse)
     }
 
-    //TODO:???
     public void getSessionInfo(int sessionId) {
         if (isDeviceReady() == false) {
             return;
@@ -1024,10 +1013,9 @@ public class Neblina extends BluetoothGattCallback implements Parcelable {
     public void writeToParcel(Parcel out, int flags) {
         out.writeValue(Nebdev);
         out.writeLong(DevId); //TODO: Do we really need these parcel writes???
-        out.writeValue(mBleGatt); //Seems to cause problems when pressing Start Game Button
-        out.writeValue(mDelegate);
-        out.writeValue(mCtrlChar);
-
+//        out.writeValue(mBleGatt); //Seems to cause problems when pressing Start Game Button
+//        out.writeValue(mDelegate);
+//        out.writeValue(mCtrlChar);
     }
 
     public static final Parcelable.Creator<Neblina> CREATOR

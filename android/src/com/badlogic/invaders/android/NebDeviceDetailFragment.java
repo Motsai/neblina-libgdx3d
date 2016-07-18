@@ -6,10 +6,12 @@ package com.badlogic.invaders.android;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.util.Arrays;
 
@@ -44,6 +46,7 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
 
         mItem = item;
         mItem.SetDelegate(this);
+//        mItem.Connect(getActivity());
     }
 
     @Override
@@ -73,10 +76,25 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
     }
 
 
-    public void didConnectNeblina() {
+    public void initializeNeblina() {
+        //By default start streaming quaternions
         mItem.streamQuaternion(true);
+        BLEDeviceScanActivity.is_QUATERNION_BUTTON_on = true;
+
+        //Set the quaternion button to on so the user can see that quaternions are streaming
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.w("BLUETOOTH_DEBUG", "Setting the button checked!");
+              ToggleButton toggleButton = (ToggleButton)getActivity().findViewById(R.id.QUATERNION_BUTTON);
+                toggleButton.setChecked(true);
+            }
+        });
     }
-    public void didReceiveRSSI(int rssi) {}
+
+    public void didReceiveRSSI(int rssi) {
+
+    }
 
     public void didReceiveFusionData(int type , byte[] data, boolean errFlag) {
         switch (type) {
@@ -141,6 +159,7 @@ public class NebDeviceDetailFragment extends Fragment implements NeblinaDelegate
 
     }
     public void didReceiveStorageData(int type, byte[] data, boolean errFlag) {
+        BLEDeviceScanActivity.playbackNumber = 0;    //TODO: Get the sessionID from the storageData and feed it to Flash Playback button
 
     }
     public void didReceiveEepromData(int type, byte[] data, boolean errFlag) {

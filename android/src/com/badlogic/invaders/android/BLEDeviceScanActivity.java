@@ -82,18 +82,20 @@ public class BLEDeviceScanActivity extends ListActivity {
             = MediaType.parse("application/json; charset=utf-8");
 
     //Button state variables
-    boolean is_BLE_BUTTON_on           = false;
-    boolean is_UART_BUTTON_on          = false;
-    boolean is_QUATERNION_BUTTON_on    = false;
-    boolean is_MAG_BUTTON_on           = false;
-    boolean is_LOCK_BUTTON_on          = false;
-    boolean is_ERASE_BUTTON_on         = false;
-    boolean is_RECORD_BUTTON_on        = false;
-    boolean is_PLAYBACK_BUTTON_on      = false;
-    boolean is_LED0_BUTTON_state_on    = false;
-    boolean is_LED1_BUTTON_on          = false;
-    boolean is_EEPROM_BUTTON_on        = false;
-    boolean is_CHARGE_INPUT_on         = false;
+    public static boolean is_BLE_BUTTON_on           = false;
+    public static boolean is_UART_BUTTON_on          = false;
+    public static boolean is_QUATERNION_BUTTON_on    = false;
+    public static boolean is_MAG_BUTTON_on           = false;
+    public static boolean is_LOCK_BUTTON_on          = false;
+    public static boolean is_ERASE_BUTTON_on         = false;
+    public static boolean is_RECORD_BUTTON_on        = false;
+    public static boolean is_PLAYBACK_BUTTON_on      = false;
+    public static boolean is_LED0_BUTTON_on          = false;
+    public static boolean is_LED1_BUTTON_on          = false;
+    public static boolean is_EEPROM_BUTTON_on        = false;
+    public static boolean is_CHARGE_INPUT_on         = false;
+    int eepromCounter = 0;
+    public static int playbackNumber = 0;
 
     //Code Variables
     private BluetoothAdapter mBluetoothAdapter;
@@ -189,6 +191,9 @@ public class BLEDeviceScanActivity extends ListActivity {
         arguments.putParcelable(NebDeviceDetailFragment.ARG_ITEM_ID, activeDevice);
         activeDeviceDelegate.SetItem(activeDevice);
         activeDeviceDelegate.setArguments(arguments);
+        activeDevice.Connect(getBaseContext());
+
+
         this.getFragmentManager().beginTransaction()
                     .add(activeDeviceDelegate, "Fun")
                     .commit();
@@ -305,21 +310,28 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onBLEButtonClick(View view){
             Log.w("BLUETOOTH_DEBUG", "BLE BUTTON PRESSED!");
 
+        byte value = 1;
+        if(is_BLE_BUTTON_on){
+            value = 0;
+        }
+
         if(activeDevice!=null){
-            activeDevice.setDataPort(0, (byte) 1);
+            activeDevice.setDataPort(0, value);
         }
         else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
-
-//        sendQuaternionsToCloudRESTfully("1", "1", "1", "1");
     }
 
     @OnClick(R.id.UART_BUTTON)
     public void onUARTButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "UART BUTTON PRESSED!");
+        byte value = 1;
+        if(is_UART_BUTTON_on){
+            value = 0;
+        }
         if(activeDevice!=null){
-            activeDevice.setDataPort(1, (byte) 1);
+            activeDevice.setDataPort(1, value);
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -328,8 +340,10 @@ public class BLEDeviceScanActivity extends ListActivity {
     @OnClick(R.id.QUATERNION_BUTTON)
     public void onQuaternionButtonClick(View view) {
         Log.w("BLUETOOTH_DEBUG", "QUATERNION BUTTON PRESSED!");
+
         if(activeDevice!=null){
-            activeDevice.streamQuaternion(true);
+            activeDevice.streamQuaternion(!is_QUATERNION_BUTTON_on);
+            is_QUATERNION_BUTTON_on = !is_QUATERNION_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -340,7 +354,8 @@ public class BLEDeviceScanActivity extends ListActivity {
         Log.w("BLUETOOTH_DEBUG", "MAG BUTTON PRESSED!");
 
         if(activeDevice!=null){
-            activeDevice.streamMAG(true);
+            activeDevice.streamMAG(!is_MAG_BUTTON_on);
+            is_MAG_BUTTON_on = !is_MAG_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -352,7 +367,8 @@ public class BLEDeviceScanActivity extends ListActivity {
         Log.w("BLUETOOTH_DEBUG", "LOCK BUTTON PRESSED!");
 
         if(activeDevice!=null){
-            activeDevice.setLockHeadingReference(true);
+            activeDevice.setLockHeadingReference(!is_LOCK_BUTTON_on);
+            is_LOCK_BUTTON_on = !is_LOCK_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -365,7 +381,8 @@ public class BLEDeviceScanActivity extends ListActivity {
         Log.w("BLUETOOTH_DEBUG", "ERASE BUTTON PRESSED!");
 
         if(activeDevice!=null){
-            activeDevice.eraseStorage(true);
+            activeDevice.eraseStorage(!is_ERASE_BUTTON_on);
+            is_ERASE_BUTTON_on = !is_ERASE_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -376,7 +393,8 @@ public class BLEDeviceScanActivity extends ListActivity {
         Log.w("BLUETOOTH_DEBUG", "RECORD BUTTON PRESSED!");
 
         if(activeDevice!=null){
-            activeDevice.sessionRecord(true);
+            activeDevice.sessionRecord(!is_RECORD_BUTTON_on);
+            is_RECORD_BUTTON_on = !is_RECORD_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -388,18 +406,24 @@ public class BLEDeviceScanActivity extends ListActivity {
         Log.w("BLUETOOTH_DEBUG", "PLAYBACK BUTTON PRESSED!");
 
         if(activeDevice!=null){
-            activeDevice.sessionPlayback(true,0001); //TODO: What should be the sessionID here???
+            activeDevice.sessionPlayback(!is_PLAYBACK_BUTTON_on, playbackNumber);
+            is_PLAYBACK_BUTTON_on = !is_PLAYBACK_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
-
     }
 
     @OnClick(R.id.LED0_BUTTON)
     public void onLED0ButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "LED0 BUTTON PRESSED!");
+
+        byte value = (byte)0x00;
+        if(is_LED0_BUTTON_on == false) {
+                value = (byte)0xff;
+            }
         if(activeDevice!=null){
-            activeDevice.setLed((byte) 0, (byte) 1);
+            activeDevice.setLed((byte) 0, value);
+            is_LED0_BUTTON_on = !is_LED0_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -408,8 +432,14 @@ public class BLEDeviceScanActivity extends ListActivity {
     @OnClick(R.id.LED1_BUTTON)
     public void onLED1ButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "LED1 BUTTON PRESSED!");
+
+        byte value = (byte)0x00;
+        if(is_LED1_BUTTON_on == false){
+            value = (byte)0xff;
+        }
         if(activeDevice!=null){
-            activeDevice.setLed((byte) 1, (byte) 1);
+            activeDevice.setLed((byte) 1, value);
+            is_LED1_BUTTON_on = !is_LED1_BUTTON_on;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
@@ -419,7 +449,8 @@ public class BLEDeviceScanActivity extends ListActivity {
     public void onEEPROMButtonClick(View view){
         Log.w("BLUETOOTH_DEBUG", "EEPROM BUTTON PRESSED!");
         if(activeDevice!=null){
-            activeDevice.eepromRead(1);
+            activeDevice.eepromRead(eepromCounter);
+            eepromCounter++;
         }else{
             Log.w("BLUETOOTH_DEBUG", "DEVICE NOT READY");
         }
